@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
               Technical Base
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
-              Data Science & GenAI
+              Data Science &amp; ML
             </span>
           </div>
           <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors col-span-1 sm:col-span-2 lg:col-span-1">
@@ -108,10 +108,10 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
             <Cpu className="h-5 w-5 text-purple-400 mb-1.5" />
             <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              Project Proof
+              GenAI/RAG
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
-              RAG / ML / Analytics
+              Retrieval &amp; Evaluation
             </span>
           </div>
           <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">

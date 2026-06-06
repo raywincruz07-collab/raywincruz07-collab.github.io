@@ -56,9 +56,9 @@ export const portfolioData: PortfolioData = {
       "I combine AI product thinking with hands-on data science and GenAI/RAG implementation. My work focuses on researching AI use cases, evaluating technical feasibility, building practical AI/data prototypes, and translating technical findings into clear product direction.",
     stats: [
       "AI Product Management",
-      "Data Science & GenAI",
+      "Data Science & ML",
       "SAP HANA Cloud",
-      "RAG / ML / Analytics",
+      "RAG / ML Evaluation",
       "Germany-based",
     ],
     about:
@@ -67,7 +67,7 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://www.linkedin.com/in/raywincruz",
     github: "https://github.com/raywincruz07-collab",
     message:
-      "Focused on AI Product Management with hands-on strength in GenAI/RAG, data science, AI evaluation, and cloud data product workflows.",
+      "Focused on AI Product Management with hands-on strength in GenAI/RAG, data science, ML evaluation, and cloud data product workflows.",
   },
   skills: [
     {
@@ -122,7 +122,7 @@ export const portfolioData: PortfolioData = {
       ],
     },
     {
-      category: "Tools",
+      category: "Tools & BI",
       skills: [
         "Git",
         "GitHub",
@@ -240,7 +240,7 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Compared Logistic Regression, Decision Tree, Random Forest, XGBoost, SVM, and a soft-voting ensemble using accuracy, weighted F1, and ROC-AUC. Practiced fair model evaluation under class imbalance and analyzed model behavior across protected attributes.",
-      githubUrl: "",
+      githubUrl: "https://github.com/hazarcs/IE500-DataMining-Project",
       caseStudyUrl: "",
     },
   ],

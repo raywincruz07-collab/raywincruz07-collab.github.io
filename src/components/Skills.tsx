@@ -23,6 +23,8 @@ export const Skills: React.FC = () => {
         return <Cpu className="h-5 w-5 text-purple-400" />;
       case "data / cloud systems":
         return <Database className="h-5 w-5 text-indigo-400" />;
+      case "tools & bi":
+        return <Wrench className="h-5 w-5 text-pink-400" />;
       default:
         return <Wrench className="h-5 w-5 text-pink-400" />;
     }
@@ -40,6 +42,8 @@ export const Skills: React.FC = () => {
         return "border-purple-500/20 hover:border-purple-500/40 bg-purple-950/5";
       case "data / cloud systems":
         return "border-indigo-500/20 hover:border-indigo-500/40 bg-indigo-950/5";
+      case "tools & bi":
+        return "border-pink-500/20 hover:border-pink-500/40 bg-pink-950/5";
       default:
         return "border-pink-500/20 hover:border-pink-500/40 bg-pink-950/5";
     }

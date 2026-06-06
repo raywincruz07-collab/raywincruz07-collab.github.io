@@ -59,8 +59,8 @@ export const Contact: React.FC = () => {
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-xl">
             For AI product, technical product management, GenAI/RAG, data
-            science, or cloud data product conversations, reach me directly
-            through the channels below.
+            science, machine learning, or cloud data product conversations,
+            reach me directly through the channels below.
           </p>
         </div>
 
