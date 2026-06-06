@@ -45,7 +45,7 @@ export const MoreProjects: React.FC = () => {
                 </div>
 
                 {/* One-line Description */}
-                <p className="text-slate-405 text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-400 text-xs leading-relaxed">
                   {project.description}
                 </p>
 
@@ -76,7 +76,7 @@ export const MoreProjects: React.FC = () => {
                   </a>
                 ) : (
                   <span
-                    className="text-[9.5px] font-semibold text-slate-550 uppercase tracking-wider select-none"
+                    className="text-[9.5px] font-semibold text-slate-500 uppercase tracking-wider select-none"
                   >
                     Academic / Internal Project
                   </span>

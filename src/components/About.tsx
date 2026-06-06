@@ -33,7 +33,7 @@ export const About: React.FC = () => {
                   <Briefcase className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-205 text-slate-200 text-sm sm:text-base">Product-Oriented AI</h4>
+                  <h4 className="font-semibold text-slate-200 text-sm sm:text-base">Product-Oriented AI</h4>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
                     Translating AI capabilities, use cases, and technical findings into clear product direction.
                   </p>
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
                   <Code className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-205 text-slate-200 text-sm sm:text-base">Hands-on Technical Base</h4>
+                  <h4 className="font-semibold text-slate-200 text-sm sm:text-base">Hands-on Technical Base</h4>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
                     Building and evaluating AI/data projects around GenAI, RAG, data mining, and cloud data workflows.
                   </p>

@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
                 {linkedinIconSvg}
               </a>
             ) : (
-              <span className="text-slate-650 cursor-not-allowed opacity-40" title="LinkedIn - Coming Soon">
+              <span className="text-slate-500 cursor-not-allowed opacity-40" title="LinkedIn - Coming Soon">
                 {linkedinIconSvg}
               </span>
             )}
@@ -117,7 +117,7 @@ export const Navbar: React.FC = () => {
                 {linkedinIconSvg}
               </a>
             ) : (
-              <span className="text-slate-650 cursor-not-allowed opacity-40" title="LinkedIn - Coming Soon">
+              <span className="text-slate-500 cursor-not-allowed opacity-40" title="LinkedIn - Coming Soon">
                 {linkedinIconSvg}
               </span>
             )}

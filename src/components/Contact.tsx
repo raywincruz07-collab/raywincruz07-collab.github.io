@@ -55,7 +55,7 @@ export const Contact: React.FC = () => {
                 <span>Current Focus</span>
               </span>
               <h3 className="font-bold text-slate-200 text-base mb-2">Professional Focus</h3>
-              <p className="text-slate-305 text-slate-300 text-sm leading-relaxed">{message}</p>
+              <p className="text-slate-300 text-sm leading-relaxed">{message}</p>
             </div>
 
             <div className="rounded-xl bg-slate-900/10 border border-slate-900 p-5">
@@ -84,14 +84,14 @@ export const Contact: React.FC = () => {
                     {/* Clipboard copy toggle */}
                     <button
                       onClick={copyEmail}
-                      className="p-1.5 text-slate-500 hover:text-slate-200 bg-slate-950/60 hover:bg-slate-900 rounded-md border border-slate-850 hover:border-slate-800 transition-colors"
+                      className="p-1.5 text-slate-500 hover:text-slate-200 bg-slate-950/60 hover:bg-slate-900 rounded-md border border-slate-800 hover:border-slate-800 transition-colors"
                       title="Copy email to clipboard"
                     >
                       {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
                     </button>
                   </div>
                   <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">Email Raywin</h4>
-                  <p className="text-xs text-slate-450 mt-1 leading-relaxed">Send inquiries directly to my inbox.</p>
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">Send inquiries directly to my inbox.</p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-300 select-all mt-4 font-mono">{email}</span>
               </a>
@@ -109,7 +109,7 @@ export const Contact: React.FC = () => {
                       {linkedinIconSvg}
                     </div>
                     <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">LinkedIn</h4>
-                    <p className="text-xs text-slate-450 mt-1 leading-relaxed">Connect to discuss roles and professional background.</p>
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">Connect to discuss roles and professional background.</p>
                   </div>
                   <span className="text-[11px] font-semibold text-slate-400 mt-4">Connect on LinkedIn &rarr;</span>
                 </a>
@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
                 >
                   <div>
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 border border-slate-900 mb-4">
-                      <svg className="h-5 w-5 text-slate-650" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg className="h-5 w-5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                         <rect width="4" height="12" x="2" y="9" />
                         <circle cx="4" cy="4" r="2" />
@@ -145,7 +145,7 @@ export const Contact: React.FC = () => {
                     {githubIconSvg}
                   </div>
                   <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">GitHub</h4>
-                  <p className="text-xs text-slate-450 mt-1 leading-relaxed">Check source repositories for RAG and ML systems.</p>
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">Check source repositories for RAG and ML systems.</p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-400 mt-4">Explore Repositories &rarr;</span>
               </a>
@@ -163,7 +163,7 @@ export const Contact: React.FC = () => {
                     <FileText className="h-5 w-5 text-violet-400" />
                   </div>
                   <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">Download CV</h4>
-                  <p className="text-xs text-slate-450 mt-1 leading-relaxed">Save a copy of my curriculum vitae (PDF format).</p>
+                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">Save a copy of my curriculum vitae (PDF format).</p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-400 mt-4">Download CV (PDF) &rarr;</span>
               </a>

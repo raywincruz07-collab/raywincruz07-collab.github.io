@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6 md:p-8 shadow-xl backdrop-blur-sm hover:border-violet-500/20 hover:bg-slate-900/60 transition-all duration-300"
+              className="group rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 sm:p-6 md:p-8 shadow-xl backdrop-blur-sm hover:border-violet-500/20 hover:bg-slate-900/60 transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 
@@ -55,25 +55,25 @@ export const Projects: React.FC = () => {
                       {project.title}
                     </h3>
                   </div>
-
+ 
                   {/* Problem Statement */}
                   <div>
                     <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400">The Problem</h4>
                     <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">{project.problem}</p>
                   </div>
-
+ 
                   {/* What I Built */}
                   <div>
                     <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400">What I Built</h4>
                     <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">{project.whatIBuilt}</p>
                   </div>
-
+ 
                   {/* Outcome / Learning */}
-                  <div className="rounded-xl bg-slate-950/40 border border-slate-900/60 p-4">
+                  <div className="rounded-xl bg-slate-950/40 border border-slate-900/60 p-3.5 sm:p-4">
                     <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-violet-400">Impact & Learnings</h4>
                     <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">{project.outcome}</p>
                   </div>
-
+ 
                   {/* Tech Stack Pills */}
                   <div className="flex flex-wrap gap-1.5 pt-2">
                     {project.techStack.map((tech) => (
@@ -86,7 +86,7 @@ export const Projects: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
+ 
                 {/* Button Action Column */}
                 <div className="flex flex-row md:flex-col gap-3 shrink-0 pt-2 w-full md:w-auto">
                   {project.githubUrl ? (
@@ -105,7 +105,7 @@ export const Projects: React.FC = () => {
                   ) : (
                     <button
                       disabled
-                      className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-lg border border-slate-900 bg-slate-950/20 px-4 py-2.5 text-xs font-semibold text-slate-605 text-slate-500 cursor-not-allowed opacity-40 w-full"
+                      className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-lg border border-slate-900 bg-slate-950/20 px-4 py-2.5 text-xs font-semibold text-slate-500 cursor-not-allowed opacity-40 w-full"
                       title="Repository Coming Soon"
                     >
                       <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
