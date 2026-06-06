@@ -1,20 +1,30 @@
-import React from 'react';
-import { portfolioData } from '../data/portfolioData';
+import React from "react";
+import { portfolioData } from "../data/portfolioData";
 
 export const MoreProjects: React.FC = () => {
   const { moreProjects } = portfolioData;
 
   const githubIconSvg = (
-    <svg className="h-4 w-4 text-slate-400 group-hover:text-violet-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className="h-4 w-4 text-slate-400 group-hover:text-violet-400 transition-colors"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
       <path d="M9 18c-4.51 2-5-2-7-2" />
     </svg>
   );
 
   return (
-    <section id="more-projects" className="py-16 bg-slate-950 border-b border-slate-900 scroll-mt-16">
+    <section
+      id="more-projects"
+      className="py-16 bg-slate-950 border-b border-slate-900 scroll-mt-16"
+    >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        
         {/* Section Heading */}
         <div className="mb-10 text-center md:text-left">
           <h2 className="text-2xl font-bold tracking-tight text-slate-200 sm:text-3xl">
@@ -22,7 +32,9 @@ export const MoreProjects: React.FC = () => {
           </h2>
           <div className="mt-2 h-0.5 w-10 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs max-w-3xl leading-relaxed">
-            Additional academic, AI, data science, and software projects showing breadth across machine learning, analytics, NLP, data integration, and product-oriented AI work.
+            Additional academic, AI, data science, and software projects showing
+            breadth across machine learning, analytics, NLP, data integration,
+            and product-oriented AI work.
           </p>
         </div>
 
@@ -75,9 +87,7 @@ export const MoreProjects: React.FC = () => {
                     <span>GitHub &rarr;</span>
                   </a>
                 ) : (
-                  <span
-                    className="text-[9.5px] font-semibold text-slate-500 uppercase tracking-wider select-none"
-                  >
+                  <span className="text-[9.5px] font-semibold text-slate-500 uppercase tracking-wider select-none">
                     Academic / Internal Project
                   </span>
                 )}
@@ -85,7 +95,6 @@ export const MoreProjects: React.FC = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

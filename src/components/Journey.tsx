@@ -1,14 +1,16 @@
-import React from 'react';
-import { Briefcase, Calendar, GraduationCap } from 'lucide-react';
-import { portfolioData } from '../data/portfolioData';
+import React from "react";
+import { Briefcase, Calendar, GraduationCap } from "lucide-react";
+import { portfolioData } from "../data/portfolioData";
 
 export const Journey: React.FC = () => {
   const { journey } = portfolioData;
 
   return (
-    <section id="journey" className="py-16 sm:py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16">
+    <section
+      id="journey"
+      className="py-16 sm:py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16"
+    >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        
         {/* Section Heading */}
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -16,15 +18,16 @@ export const Journey: React.FC = () => {
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-md mx-auto px-2">
-            Academic milestones, technical experience, and career trajectory in Germany.
+            Academic milestones, technical experience, and career trajectory in
+            Germany.
           </p>
         </div>
 
         {/* Timeline Component */}
         <div className="relative border-l border-slate-800/80 ml-4 md:ml-12 pl-6 md:pl-8 space-y-10 sm:space-y-12 max-w-3xl mx-auto">
           {journey.map((item) => {
-            const isEducation = item.title.includes('M.Sc.');
-            const isReady = item.title.includes('Readiness');
+            const isEducation = item.title.includes("M.Sc.");
+            const isReady = item.title.includes("Readiness");
 
             return (
               <div key={item.title} className="relative group">
@@ -58,7 +61,6 @@ export const Journey: React.FC = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );

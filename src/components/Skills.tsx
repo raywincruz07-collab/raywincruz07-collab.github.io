@@ -1,19 +1,19 @@
-import React from 'react';
-import { Terminal, Database, Brain, Cpu, Wrench } from 'lucide-react';
-import { portfolioData } from '../data/portfolioData';
+import React from "react";
+import { Terminal, Database, Brain, Cpu, Wrench } from "lucide-react";
+import { portfolioData } from "../data/portfolioData";
 
 export const Skills: React.FC = () => {
   const { skills } = portfolioData;
 
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
-      case 'programming':
+      case "programming":
         return <Terminal className="h-5 w-5 text-violet-400" />;
-      case 'data science / ml':
+      case "data science / ml":
         return <Brain className="h-5 w-5 text-fuchsia-400" />;
-      case 'genai / rag':
+      case "genai / rag":
         return <Cpu className="h-5 w-5 text-purple-400" />;
-      case 'data engineering':
+      case "data engineering":
         return <Database className="h-5 w-5 text-indigo-400" />;
       default:
         return <Wrench className="h-5 w-5 text-pink-400" />;
@@ -22,23 +22,25 @@ export const Skills: React.FC = () => {
 
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {
-      case 'programming':
-        return 'border-violet-500/20 hover:border-violet-500/40 bg-violet-950/5';
-      case 'data science / ml':
-        return 'border-fuchsia-500/20 hover:border-fuchsia-500/40 bg-fuchsia-950/5';
-      case 'genai / rag':
-        return 'border-purple-500/20 hover:border-purple-500/40 bg-purple-950/5';
-      case 'data engineering':
-        return 'border-indigo-500/20 hover:border-indigo-500/40 bg-indigo-950/5';
+      case "programming":
+        return "border-violet-500/20 hover:border-violet-500/40 bg-violet-950/5";
+      case "data science / ml":
+        return "border-fuchsia-500/20 hover:border-fuchsia-500/40 bg-fuchsia-950/5";
+      case "genai / rag":
+        return "border-purple-500/20 hover:border-purple-500/40 bg-purple-950/5";
+      case "data engineering":
+        return "border-indigo-500/20 hover:border-indigo-500/40 bg-indigo-950/5";
       default:
-        return 'border-pink-500/20 hover:border-pink-500/40 bg-pink-950/5';
+        return "border-pink-500/20 hover:border-pink-500/40 bg-pink-950/5";
     }
   };
 
   return (
-    <section id="skills" className="py-16 sm:py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16">
+    <section
+      id="skills"
+      className="py-16 sm:py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16"
+    >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        
         {/* Section Heading */}
         <div className="mb-10 sm:mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -46,7 +48,8 @@ export const Skills: React.FC = () => {
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
           <p className="mt-4 text-xs sm:text-sm text-slate-400 max-w-md mx-auto px-2">
-            Practical tools and methodologies applied throughout M.Sc. coursework and project developments.
+            Practical tools and methodologies applied throughout M.Sc.
+            coursework and project developments.
           </p>
         </div>
 
@@ -81,7 +84,6 @@ export const Skills: React.FC = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
