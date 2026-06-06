@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Raywin Cruz Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for **Raywin Cruz**, M.Sc. Data Science student at the University of Mannheim, currently working in AI Product Management related to SAP HANA Cloud.
 
-Currently, two official plugins are available:
+* **Live URL**: [https://raywincruz07-collab.github.io](https://raywincruz07-collab.github.io)
+* **Target Audience**: Recruiters, hiring managers, and product leaders in Germany looking for working students or graduates with strong technical and product alignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This website serves as a recruiter-facing landing page showcasing my background at the intersection of AI product management, data science, and cloud database workflows. It is designed to be highly readable, premium, and performant.
 
-## Expanding the ESLint configuration
+### Core Sections
+* **Hero Section**: Positioning details (SAP HANA Cloud, AI PM, GenAI/RAG), location, and clean recruiter CTAs.
+* **About Me**: Narrative detailing M.Sc. Data Science studies at the University of Mannheim, product-oriented AI focus, and technical base.
+* **Skills Dashboard**: Categorized display of core competency fields (Programming, ML, GenAI/RAG, Data Engineering, and Tools).
+* **Featured Projects**: Highlighted project cards detailing the concrete Problem, What I Built, Tech stack, and Outcomes/Learnings.
+* **More Projects (Archive)**: A secondary grid showing additional project breadth (Malware classification, Web data scraping, KPI reporting, Sentiment analyzers) labeled as Academic/Internal.
+* **Journey Timeline**: Vertical milestone mapping representing SAP HANA Cloud work and academic achievements.
+* **Contact Cards**: Copy-to-clipboard email channel (`raywincruz2003@gmail.com`), CV target downloads, and direct social profile redirects.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Core Framework**: React 19, TypeScript
+* **Build Tool**: Vite (Vite v8 compiler)
+* **Styling**: Tailwind CSS v4 (using the `@tailwindcss/vite` configuration layer)
+* **Icons**: Lucide React
+* **Hosting**: GitHub Pages
+* **Automation**: GitHub Actions (`deploy.yml`)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 💻 Local Development
+
+Follow these steps to run the portfolio website locally on your machine:
+
+### 1. Install Dependencies
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Run the Development Server
+```bash
+npm run dev
 ```
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the hot-rebuilding site.
+
+### 3. Build for Production
+```bash
+npm run build
+```
+This generates optimized static files inside the `dist/` directory, ready to be deployed.
+
+---
+
+## 📦 Deployment Flow
+
+The project deploys automatically to GitHub Pages using GitHub Actions. The workflow configuration is located in:
+`.github/workflows/deploy.yml`
+
+On every push to the **`main`** branch, the workflow:
+1. Checks out the code.
+2. Sets up Node.js v20 with npm caching.
+3. Installs dependencies using `npm ci`.
+4. Compiles the TypeScript and generates the production bundle using `npm run build`.
+5. Uploads the `dist/` folder as a Pages artifact.
+6. Publishes it to the live domain.
+
+> **Note**: To serve your CV PDF, make sure to place `Raywin_CV.pdf` directly inside the `/public` folder at the root of the project.
