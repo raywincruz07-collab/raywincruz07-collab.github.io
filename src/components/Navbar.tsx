@@ -1,0 +1,133 @@
+import React, { useState } from 'react';
+import { Menu, X, Mail } from 'lucide-react';
+import { portfolioData } from '../data/portfolioData';
+
+export const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { name, github, linkedin, email } = portfolioData.personalInfo;
+
+  const navLinks = [
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Journey', href: '#journey' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
+  const linkedinIconSvg = (
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+
+  const githubIconSvg = (
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  );
+
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo / Monogram */}
+          <div className="flex-shrink-0">
+            <a href="#" className="font-sans font-extrabold text-xl tracking-tight bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+              {name.split(' ')[0]}<span className="text-slate-100">.</span>
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-slate-300 hover:text-violet-400 transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Social icons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a href={github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-100 transition-colors" title="GitHub Profile">
+              {githubIconSvg}
+            </a>
+            
+            {linkedin ? (
+              <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-100 transition-colors" title="LinkedIn Profile">
+                {linkedinIconSvg}
+              </a>
+            ) : (
+              <span className="text-slate-650 cursor-not-allowed opacity-40" title="LinkedIn - Coming Soon">
+                {linkedinIconSvg}
+              </span>
+            )}
+
+            <a href={`mailto:${email}`} className="text-slate-400 hover:text-slate-100 transition-colors" title="Email Raywin">
+              <Mail className="h-5 w-5" />
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              className="inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:bg-slate-900 hover:text-slate-100 focus:outline-none"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-slate-950 border-b border-slate-800" id="mobile-menu">
+          <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block rounded-md px-3 py-2 text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-violet-400"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          <div className="flex justify-around py-4 border-t border-slate-800 bg-slate-950/50">
+            <a href={github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-violet-400">
+              {githubIconSvg}
+            </a>
+            
+            {linkedin ? (
+              <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-violet-400">
+                {linkedinIconSvg}
+              </a>
+            ) : (
+              <span className="text-slate-650 cursor-not-allowed opacity-40" title="LinkedIn - Coming Soon">
+                {linkedinIconSvg}
+              </span>
+            )}
+            
+            <a href={`mailto:${email}`} className="text-slate-400 hover:text-violet-400">
+              <Mail className="h-6 w-6" />
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
