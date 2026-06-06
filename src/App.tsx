@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { WorkFocus } from './components/WorkFocus';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { MoreProjects } from './components/MoreProjects';
@@ -21,6 +22,9 @@ function App() {
 
         {/* Biography Context */}
         <About />
+
+        {/* Current Work Focus */}
+        <WorkFocus />
 
         {/* Skill Category Badges */}
         <Skills />
