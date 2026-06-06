@@ -6,7 +6,7 @@ export const Journey: React.FC = () => {
   const { journey } = portfolioData;
 
   return (
-    <section id="journey" className="py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16">
+    <section id="journey" className="py-16 sm:py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -15,13 +15,13 @@ export const Journey: React.FC = () => {
             My Journey
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
-          <p className="mt-4 text-slate-400 text-sm max-w-md mx-auto">
+          <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-md mx-auto px-2">
             Academic milestones, technical experience, and career trajectory in Germany.
           </p>
         </div>
 
         {/* Timeline Component */}
-        <div className="relative border-l border-slate-800/80 ml-4 md:ml-12 pl-6 md:pl-8 space-y-12 max-w-3xl mx-auto">
+        <div className="relative border-l border-slate-800/80 ml-4 md:ml-12 pl-6 md:pl-8 space-y-10 sm:space-y-12 max-w-3xl mx-auto">
           {journey.map((item) => {
             const isEducation = item.title.includes('M.Sc.');
             const isReady = item.title.includes('Readiness');
@@ -43,14 +43,14 @@ export const Journey: React.FC = () => {
                 <div className="rounded-xl border border-slate-900/60 bg-slate-950/40 p-5 backdrop-blur-sm group-hover:border-slate-850 hover:bg-slate-900/10 transition-all duration-300">
                   {/* Period Badge if present */}
                   {item.period && (
-                    <span className="inline-flex items-center rounded-full bg-violet-500/10 px-2.5 py-0.5 text-xs font-medium text-violet-400 mb-2">
+                    <span className="inline-flex items-center rounded-full bg-violet-500/10 px-2.5 py-0.5 text-[10px] font-medium text-violet-400 mb-2">
                       {item.period}
                     </span>
                   )}
-                  <h3 className="text-lg font-bold text-slate-100 group-hover:text-violet-400 transition-colors duration-250">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-100 group-hover:text-violet-400 transition-colors duration-250">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-400">
                     {item.description}
                   </p>
                 </div>

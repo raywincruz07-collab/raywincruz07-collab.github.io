@@ -30,16 +30,16 @@ export const Contact: React.FC = () => {
   );
 
   return (
-    <section id="contact" className="py-20 bg-slate-950/40 border-b border-slate-900 scroll-mt-16">
+    <section id="contact" className="py-16 sm:py-20 bg-slate-950/40 border-b border-slate-900 scroll-mt-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="mb-12 text-center md:text-left">
+        <div className="mb-10 sm:mb-12 text-center md:text-left">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Get in Touch
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
-          <p className="mt-4 text-slate-400 text-sm max-w-xl">
+          <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-xl">
             Interested in discussing opportunities? Feel free to reach out directly through any of the channels below.
           </p>
         </div>
@@ -48,14 +48,14 @@ export const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Messaging & Availability */}
-          <div className="md:col-span-5 space-y-6">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6">
+          <div className="lg:col-span-5 space-y-6 w-full">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 sm:p-6">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-500/10 px-2.5 py-0.5 text-xs font-medium text-violet-400 mb-4">
                 <span className="h-1.5 w-1.5 rounded-full bg-violet-400 animate-pulse" />
                 <span>Current Focus</span>
               </span>
               <h3 className="font-bold text-slate-200 text-base mb-2">Professional Focus</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">{message}</p>
+              <p className="text-slate-305 text-slate-300 text-sm leading-relaxed">{message}</p>
             </div>
 
             <div className="rounded-xl bg-slate-900/10 border border-slate-900 p-5">
@@ -67,13 +67,13 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Right Column: Recruiter CTA Cards Grid */}
-          <div className="md:col-span-7">
+          <div className="lg:col-span-7 w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               {/* Card 1: Email */}
               <a
                 href={`mailto:${email}`}
-                className="group relative flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
+                className="group relative flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-5 sm:p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -90,7 +90,7 @@ export const Contact: React.FC = () => {
                       {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
                     </button>
                   </div>
-                  <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors">Email Raywin</h4>
+                  <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">Email Raywin</h4>
                   <p className="text-xs text-slate-450 mt-1 leading-relaxed">Send inquiries directly to my inbox.</p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-300 select-all mt-4 font-mono">{email}</span>
@@ -102,20 +102,20 @@ export const Contact: React.FC = () => {
                   href={linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
+                  className="group flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-5 sm:p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
                 >
                   <div>
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 border border-slate-800 group-hover:border-violet-500/20 transition-colors mb-4">
                       {linkedinIconSvg}
                     </div>
-                    <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors">LinkedIn</h4>
+                    <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">LinkedIn</h4>
                     <p className="text-xs text-slate-450 mt-1 leading-relaxed">Connect to discuss roles and professional background.</p>
                   </div>
                   <span className="text-[11px] font-semibold text-slate-400 mt-4">Connect on LinkedIn &rarr;</span>
                 </a>
               ) : (
                 <div
-                  className="flex flex-col justify-between rounded-2xl border border-slate-900 bg-slate-900/5 p-6 shadow-md opacity-40 cursor-not-allowed select-none"
+                  className="flex flex-col justify-between rounded-2xl border border-slate-900 bg-slate-900/5 p-5 sm:p-6 shadow-md opacity-40 cursor-not-allowed select-none"
                   title="LinkedIn Profile - Coming Soon"
                 >
                   <div>
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
                         <circle cx="4" cy="4" r="2" />
                       </svg>
                     </div>
-                    <h4 className="font-bold text-slate-400">LinkedIn</h4>
+                    <h4 className="font-bold text-slate-400 text-sm sm:text-base">LinkedIn</h4>
                     <p className="text-xs text-slate-500 mt-1 leading-relaxed">Connect to discuss roles and professional background.</p>
                   </div>
                   <span className="text-[11px] font-semibold text-slate-500 mt-4">Coming Soon</span>
@@ -138,13 +138,13 @@ export const Contact: React.FC = () => {
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
+                className="group flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-5 sm:p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
               >
                 <div>
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 border border-slate-800 group-hover:border-violet-500/20 transition-colors mb-4">
                     {githubIconSvg}
                   </div>
-                  <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors">GitHub</h4>
+                  <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">GitHub</h4>
                   <p className="text-xs text-slate-450 mt-1 leading-relaxed">Check source repositories for RAG and ML systems.</p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-400 mt-4">Explore Repositories &rarr;</span>
@@ -156,13 +156,13 @@ export const Contact: React.FC = () => {
                 href="/Raywin_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
+                className="group flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/20 p-5 sm:p-6 shadow-md transition-all duration-300 hover:border-violet-500/35 hover:bg-slate-900/40"
               >
                 <div>
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 border border-slate-800 group-hover:border-violet-500/20 transition-colors mb-4">
                     <FileText className="h-5 w-5 text-violet-400" />
                   </div>
-                  <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors">Download CV</h4>
+                  <h4 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm sm:text-base">Download CV</h4>
                   <p className="text-xs text-slate-450 mt-1 leading-relaxed">Save a copy of my curriculum vitae (PDF format).</p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-400 mt-4">Download CV (PDF) &rarr;</span>

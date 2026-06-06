@@ -6,11 +6,11 @@ export const About: React.FC = () => {
   const { about } = portfolioData.personalInfo;
 
   return (
-    <section id="about" className="py-20 bg-slate-950/40 border-b border-slate-900 scroll-mt-16">
+    <section id="about" className="py-16 sm:py-20 bg-slate-950/40 border-b border-slate-900 scroll-mt-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="mb-12 text-center md:text-left">
+        <div className="mb-10 sm:mb-12 text-center md:text-left">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             About Me
           </h2>
@@ -22,7 +22,7 @@ export const About: React.FC = () => {
           
           {/* Main Narrative Column */}
           <div className="md:col-span-7 space-y-6">
-            <p className="text-lg leading-relaxed text-slate-350 text-slate-300">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-300">
               {about}
             </p>
             
@@ -33,7 +33,7 @@ export const About: React.FC = () => {
                   <Briefcase className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-205 text-slate-200">Product-Oriented AI</h4>
+                  <h4 className="font-semibold text-slate-205 text-slate-200 text-sm sm:text-base">Product-Oriented AI</h4>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
                     Translating AI capabilities, use cases, and technical findings into clear product direction.
                   </p>
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
                   <Code className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-205 text-slate-200">Hands-on Technical Base</h4>
+                  <h4 className="font-semibold text-slate-205 text-slate-200 text-sm sm:text-base">Hands-on Technical Base</h4>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
                     Building and evaluating AI/data projects around GenAI, RAG, data mining, and cloud data workflows.
                   </p>
@@ -55,8 +55,8 @@ export const About: React.FC = () => {
           </div>
 
           {/* Quick Context Card Column */}
-          <div className="md:col-span-5">
-            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/40 p-6 shadow-xl backdrop-blur-sm">
+          <div className="md:col-span-5 w-full">
+            <div className="relative rounded-2xl border border-slate-800 bg-slate-900/40 p-5 sm:p-6 shadow-xl backdrop-blur-sm">
               <div className="absolute -top-3 right-6 flex h-6 items-center rounded-full bg-violet-600 px-3 text-[10px] font-semibold uppercase tracking-wider text-white shadow-md">
                 Current Profile
               </div>
@@ -66,26 +66,26 @@ export const About: React.FC = () => {
                   <User className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-101 text-slate-100 text-lg">Current Profile</h3>
-                  <p className="text-xs text-slate-400 mt-0.5">M.Sc. Data Science &middot; AI Product Management</p>
+                  <h3 className="font-bold text-slate-100 text-base sm:text-lg">Current Profile</h3>
+                  <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5 leading-tight">M.Sc. Data Science &middot; AI Product Management</p>
                 </div>
               </div>
               
-              <ul className="space-y-3.5 text-sm text-slate-300">
-                <li className="flex items-center gap-2.5">
-                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+              <ul className="space-y-3.5 text-xs sm:text-sm text-slate-300">
+                <li className="flex items-start gap-2.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
                   <span>Master’s student at the University of Mannheim</span>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+                <li className="flex items-start gap-2.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
                   <span>Current focus: AI Product Management and SAP HANA Cloud</span>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+                <li className="flex items-start gap-2.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
                   <span>Germany-based with working-student authorization</span>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+                <li className="flex items-start gap-2.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
                   <span>Working language: English</span>
                 </li>
               </ul>

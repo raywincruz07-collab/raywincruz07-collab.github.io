@@ -36,39 +36,39 @@ export const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16">
+    <section id="skills" className="py-16 sm:py-20 bg-slate-950 border-b border-slate-900 scroll-mt-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="mb-12 text-center">
+        <div className="mb-10 sm:mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Technical Skillset
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
-          <p className="mt-4 text-sm text-slate-400 max-w-md mx-auto">
+          <p className="mt-4 text-xs sm:text-sm text-slate-400 max-w-md mx-auto px-2">
             Practical tools and methodologies applied throughout M.Sc. coursework and project developments.
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {skills.map((group) => (
             <div
               key={group.category}
-              className={`rounded-2xl border p-6 backdrop-blur-sm transition-all duration-300 ${getCategoryColor(group.category)}`}
+              className={`rounded-2xl border p-5 sm:p-6 backdrop-blur-sm transition-all duration-300 ${getCategoryColor(group.category)}`}
             >
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-5">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 border border-slate-800">
                   {getCategoryIcon(group.category)}
                 </div>
-                <h3 className="font-bold text-slate-100 tracking-wide text-md">
+                <h3 className="font-bold text-slate-100 tracking-wide text-sm sm:text-md">
                   {group.category}
                 </h3>
               </div>
 
               {/* Skills Badges */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
