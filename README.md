@@ -6,41 +6,41 @@ Personal portfolio website for Raywin Cruz, a Master's student in Data Science a
 
 ## Focus Areas
 
-- AI Product Management
-- SAP HANA Cloud
-- GenAI and RAG workflows
-- Data Science and Machine Learning
-- Cloud data product thinking
-- Evaluation-driven AI projects
+* AI Product Management
+* SAP HANA Cloud
+* GenAI and RAG workflows
+* Data Science and Machine Learning
+* Cloud data product thinking
+* Evaluation-driven AI projects
 
 ## Tech Stack
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Framer Motion
-- Lucide React
-- GitHub Pages
-- GitHub Actions
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Framer Motion
+* Lucide React
+* GitHub Pages
+* GitHub Actions
 
 ## Website Sections
 
-- Hero
-- About
-- Skills
-- Featured Projects
-- More Projects
-- Journey
-- Contact
+* Hero
+* About
+* Skills
+* Featured Projects
+* More Projects
+* Journey
+* Contact
 
 ## Featured Projects
 
-- Context Matters: Diversity-Aware Retrieval for RAG
-- Discourse Analysis — AI Product Development Project
-- AI-Based Logistics Management System
-- Economic Framing Annotation
-- Adult Income Prediction — Data Mining Project
+* Context Matters: Diversity-Aware Retrieval for RAG
+* Discourse Analysis — AI Product Development Project
+* AI-Based Logistics Management System
+* Economic Framing Annotation
+* Adult Income Prediction — Data Mining Project
 
 ## Local Development
 
@@ -50,14 +50,28 @@ Install dependencies:
 npm install
 ```
 
-Start the development server:
+Start local development server:
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+Build production version:
 
 ```bash
 npm run build
 ```
+
+## Deployment
+
+This portfolio is deployed using GitHub Pages with GitHub Actions.
+
+Live site:
+
+https://raywincruz07-collab.github.io
+
+## Contact
+
+Email: [raywincruz2003@gmail.com](mailto:raywincruz2003@gmail.com)
+LinkedIn: https://www.linkedin.com/in/raywincruz
+GitHub: https://github.com/raywincruz07-collab
