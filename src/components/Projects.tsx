@@ -40,7 +40,10 @@ export const Projects: React.FC = () => {
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
-            Selected projects that show practical work across GenAI/RAG evaluation, data mining, NLP, system design, and product-oriented AI thinking.
+            Selected projects showing how I move from problem framing to
+            technical implementation, evaluation, and product-relevant insight
+            across GenAI/RAG, NLP, data mining, logistics analytics, and
+            annotation workflows.
           </p>
         </div>
 

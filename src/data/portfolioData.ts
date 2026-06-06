@@ -137,9 +137,9 @@ export const portfolioData: PortfolioData = {
     {
       title: "Context Matters: Diversity-Aware Retrieval for RAG",
       problem:
-        "Medical RAG systems need reliable retrieval because redundant or weak context can reduce answer quality and increase hallucination risk.",
+        "Medical RAG systems depend heavily on retrieval quality. If the retrieved context is redundant, incomplete, or weak, the final answer can become less useful and more prone to hallucination.",
       whatIBuilt:
-        "Built and evaluated a baseline medical RAG pipeline on PubMedQA, comparing multiple retrieval methods including BM25, DPR, Contriever, and ColBERTv2 with a fixed LLM generator.",
+        "Built and evaluated a medical RAG baseline pipeline using PubMedQA. Compared BM25, DPR, Contriever, and ColBERTv2 retrieval methods with a fixed LLM generator to understand retrieval behavior before adding diversity-aware retrieval.",
       techStack: [
         "Python",
         "PubMedQA",
@@ -152,7 +152,7 @@ export const portfolioData: PortfolioData = {
         "Mannheim Maki API",
       ],
       outcome:
-        "Evaluated retrieval quality using Recall@5, MRR, F1, and ROUGE-L, with ColBERTv2 emerging as the strongest Sprint 1 baseline retriever. Identified the next improvement path: diversity-aware retrieval, coverage, faithfulness, and hallucination-focused evaluation.",
+        "Evaluated retrieval using Recall@5, MRR, F1, and ROUGE-L. Learned how retrieval choice affects answer quality and identified the next product-relevant improvement path: diversity, coverage, faithfulness, and hallucination-aware evaluation.",
       githubUrl:
         "https://github.com/raywincruz07-collab/Context-Matters-Evaluating-Diversity-Aware-Retrieval-for-RAG",
       caseStudyUrl: "",
@@ -160,9 +160,9 @@ export const portfolioData: PortfolioData = {
     {
       title: "Discourse Analysis — AI Product Development Project",
       problem:
-        "Public online discourse spreads across multiple platforms, making it difficult for researchers to track narratives, spikes, and cross-platform patterns manually.",
+        "Public discourse is fragmented across platforms, making it hard to track narratives, spikes, and topic movement manually.",
       whatIBuilt:
-        "Built a research-oriented discourse analysis platform with collectors, database storage, analysis modules, FastAPI backend, and a frontend dashboard for exploring posts, trends, narratives, origin traces, and AI-assisted summaries.",
+        "Built a research-oriented discourse analysis platform with data collectors, database storage, analysis modules, FastAPI backend, and dashboard views for posts, trends, narratives, origin traces, and AI-assisted summaries.",
       techStack: [
         "Python",
         "FastAPI",
@@ -174,7 +174,7 @@ export const portfolioData: PortfolioData = {
         "LLM-assisted Q&A",
       ],
       outcome:
-        "Practiced end-to-end AI product development: data collection, modular architecture, analysis workflows, dashboard design, export features, and ethical handling of public data.",
+        "Practiced product-style development from problem framing to system architecture, user-facing dashboard design, modular analysis workflows, and responsible handling of public data.",
       githubUrl:
         "https://github.com/raywincruz07-collab/AI-PRODUCT-DEVELOPMENT-Discourse-Analysis",
       caseStudyUrl: "",
@@ -182,9 +182,9 @@ export const portfolioData: PortfolioData = {
     {
       title: "AI-Based Logistics Management System",
       problem:
-        "Logistics teams need better visibility into delivery delays, routing context, operational KPIs, and decision-support insights.",
+        "Logistics operations need better visibility into delivery delays, route context, operational KPIs, and decision-support signals.",
       whatIBuilt:
-        "Designed an AI/data analytics logistics system using shipment records enriched with geolocation, routing, and weather context to support delay-risk prediction and KPI monitoring.",
+        "Designed an AI/data analytics logistics system that enriches shipment records with geolocation, route, and weather context to support delay-risk prediction and KPI monitoring.",
       techStack: [
         "Python",
         "machine learning",
@@ -197,7 +197,7 @@ export const portfolioData: PortfolioData = {
         "data pipeline design",
       ],
       outcome:
-        "Built system-level understanding of how raw shipment records can become an enriched analytical dataset for prediction, monitoring, route efficiency logic, and executive reporting.",
+        "Learned how to convert raw operational records into enriched analytics data for prediction, monitoring, route-efficiency reasoning, and executive reporting.",
       githubUrl:
         "https://github.com/raywincruz07-collab/ai_logistics_management_system",
       caseStudyUrl: "",
@@ -205,9 +205,9 @@ export const portfolioData: PortfolioData = {
     {
       title: "Economic Framing Annotation",
       problem:
-        "Large-scale immigration news analysis requires consistent annotation of economic threat and economic benefit frames across thousands of paragraphs.",
+        "Large-scale immigration news analysis requires consistent identification of economic threat and economic benefit frames across thousands of paragraphs.",
       whatIBuilt:
-        "Built a structured annotation pipeline for 10,000 German immigration news paragraphs, using a computational inference framework and validation against a human gold standard.",
+        "Built a structured annotation pipeline for 10,000 German immigration news paragraphs using computational classification and validation against a human gold standard.",
       techStack: [
         "R",
         "annotation pipeline",
@@ -225,9 +225,9 @@ export const portfolioData: PortfolioData = {
     {
       title: "Adult Income Prediction — Data Mining Project",
       problem:
-        "Predicting income categories from census-style data requires careful preprocessing, feature engineering, model comparison, and fairness analysis.",
+        "Income classification from census-style data requires careful preprocessing, model comparison, evaluation, and fairness analysis.",
       whatIBuilt:
-        "Built a full supervised machine learning pipeline for UCI Adult Income prediction, including data cleaning, feature engineering, baseline modeling, tuned classifiers, ensemble comparison, and fairness checks.",
+        "Built a supervised machine learning workflow using the UCI Adult dataset, including preprocessing, feature engineering, baseline modeling, tuned classifiers, ensemble comparison, and fairness checks.",
       techStack: [
         "Python",
         "pandas",
@@ -239,7 +239,7 @@ export const portfolioData: PortfolioData = {
         "model evaluation",
       ],
       outcome:
-        "Compared Logistic Regression, Decision Tree, Random Forest, XGBoost, SVM, and a soft-voting ensemble using accuracy, weighted F1, and ROC-AUC. Practiced fair evaluation under class imbalance and analyzed model behavior across protected attributes.",
+        "Compared Logistic Regression, Decision Tree, Random Forest, XGBoost, SVM, and a soft-voting ensemble using accuracy, weighted F1, and ROC-AUC. Practiced fair model evaluation under class imbalance and analyzed model behavior across protected attributes.",
       githubUrl: "",
       caseStudyUrl: "",
     },
