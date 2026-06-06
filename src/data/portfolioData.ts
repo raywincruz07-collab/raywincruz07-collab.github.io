@@ -68,23 +68,55 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       category: "Programming",
-      skills: ["Python", "SQL", "TypeScript basics", "JavaScript"]
+      skills: [
+        "Python",
+        "SQL",
+        "TypeScript basics",
+        "JavaScript"
+      ]
     },
     {
       category: "Data Science / ML",
-      skills: ["pandas", "NumPy", "scikit-learn", "data preprocessing", "model evaluation", "data mining"]
+      skills: [
+        "pandas",
+        "NumPy",
+        "scikit-learn",
+        "data preprocessing",
+        "model evaluation",
+        "data mining"
+      ]
     },
     {
       category: "GenAI / RAG",
-      skills: ["LLMs", "prompt engineering", "RAG evaluation", "embeddings", "vector search", "LangChain/LangGraph basics"]
+      skills: [
+        "LLMs",
+        "prompt engineering",
+        "RAG evaluation",
+        "embeddings",
+        "vector search",
+        "LangChain/LangGraph basics"
+      ]
     },
     {
       category: "Data Engineering",
-      skills: ["APIs", "ETL workflows", "PostgreSQL basics", "data validation", "Docker basics"]
+      skills: [
+        "APIs",
+        "ETL workflows",
+        "PostgreSQL basics",
+        "data validation",
+        "Docker basics"
+      ]
     },
     {
       category: "Tools & BI",
-      skills: ["Git", "GitHub", "Jupyter", "VS Code / Antigravity", "Power BI", "Tableau"]
+      skills: [
+        "Git",
+        "GitHub",
+        "Jupyter",
+        "VS Code / Antigravity",
+        "Power BI",
+        "Tableau"
+      ]
     }
   ],
   projects: [
