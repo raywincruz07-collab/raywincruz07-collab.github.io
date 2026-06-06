@@ -8,6 +8,7 @@ import { MoreProjects } from "./components/MoreProjects";
 import { Journey } from "./components/Journey";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { VerticalNav } from "./components/VerticalNav";
 
 function App() {
   return (
@@ -15,30 +16,33 @@ function App() {
       {/* Sticky Header Navigation */}
       <Navbar />
 
+      {/* Desktop vertical scroll progress navigator */}
+      <VerticalNav />
+
       {/* Main Sections */}
       <main className="flex-grow">
-        {/* Intro Hero banner */}
+        {/* 01 / Command Center */}
         <Hero />
 
-        {/* Biography Context */}
+        {/* 02 / Profile */}
         <About />
 
-        {/* Current Work Focus */}
+        {/* 03 / Product Operating System */}
         <WorkFocus />
 
-        {/* Skill Category Badges */}
+        {/* 04 / Capability Stack */}
         <Skills />
 
-        {/* Engineering Projects Grid */}
+        {/* 05 / Evidence Board */}
         <Projects />
 
-        {/* Secondary Project Archive */}
+        {/* 05b / Project Archive */}
         <MoreProjects />
 
-        {/* Education & Experience Timeline */}
+        {/* 06 / Signal Trail */}
         <Journey />
 
-        {/* Working-Student Availability / Message form */}
+        {/* 07 / Collaboration Console */}
         <Contact />
       </main>
 
@@ -49,3 +53,4 @@ function App() {
 }
 
 export default App;
+

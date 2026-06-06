@@ -4,6 +4,7 @@ export interface Project {
   whatIBuilt: string;
   techStack: string[];
   outcome: string;
+  productLearning: string;
   githubUrl: string;
   caseStudyUrl: string;
 }
@@ -153,6 +154,8 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Evaluated retrieval using Recall@5, MRR, F1, and ROUGE-L. Learned how retrieval choice affects answer quality and identified the next product-relevant improvement path: diversity, coverage, faithfulness, and hallucination-aware evaluation.",
+      productLearning:
+        "Retrieval strategy is a product decision: choosing the wrong retriever degrades answer quality before the LLM is ever involved.",
       githubUrl:
         "https://github.com/raywincruz07-collab/Context-Matters-Evaluating-Diversity-Aware-Retrieval-for-RAG",
       caseStudyUrl: "",
@@ -175,6 +178,8 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Practiced product-style development from problem framing to system architecture, user-facing dashboard design, modular analysis workflows, and responsible handling of public data.",
+      productLearning:
+        "End-to-end product thinking requires decisions beyond features — architecture, ethics, and data ownership all shape what's buildable.",
       githubUrl:
         "https://github.com/raywincruz07-collab/AI-PRODUCT-DEVELOPMENT-Discourse-Analysis",
       caseStudyUrl: "",
@@ -198,6 +203,8 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Learned how to convert raw operational records into enriched analytics data for prediction, monitoring, route-efficiency reasoning, and executive reporting.",
+      productLearning:
+        "Raw data is rarely decision-ready — enrichment (context, routing, weather) is what makes analytics actionable for operations teams.",
       githubUrl:
         "https://github.com/raywincruz07-collab/ai_logistics_management_system",
       caseStudyUrl: "",
@@ -218,6 +225,8 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Validated the pipeline against a 200-row human gold standard, reaching F1 = 0.811 for Economic Threat and F1 = 0.769 for Economic Benefit. Learned how prevalence, recall, and validation design affect annotation reliability.",
+      productLearning:
+        "Annotation quality is a system design problem — prevalence and validation strategy determine whether any downstream analysis can be trusted.",
       githubUrl:
         "https://github.com/raywincruz07-collab/economic-framing-annotation",
       caseStudyUrl: "",
@@ -240,6 +249,8 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Compared Logistic Regression, Decision Tree, Random Forest, XGBoost, SVM, and a soft-voting ensemble using accuracy, weighted F1, and ROC-AUC. Practiced fair model evaluation under class imbalance and analyzed model behavior across protected attributes.",
+      productLearning:
+        "Model selection is a tradeoff problem: accuracy alone is insufficient — fairness, interpretability, and class balance shape which model is appropriate for real use.",
       githubUrl: "",
       caseStudyUrl: "",
     },

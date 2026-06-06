@@ -1,6 +1,7 @@
 import React from "react";
 import { Briefcase, Calendar, GraduationCap } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionLabel } from "./SectionLabel";
 
 export const Journey: React.FC = () => {
   const { journey } = portfolioData;
@@ -13,8 +14,11 @@ export const Journey: React.FC = () => {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mb-16 text-center">
+          <div className="flex justify-center">
+            <SectionLabel number="06" name="Signal Trail" />
+          </div>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            My Journey
+            Signal Trail
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-md mx-auto px-2">

@@ -6,8 +6,10 @@ import {
   MessageSquare,
   Truck,
   FileText,
+  Lightbulb,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionLabel } from "./SectionLabel";
 
 export const Projects: React.FC = () => {
   const { projects } = portfolioData;
@@ -35,8 +37,9 @@ export const Projects: React.FC = () => {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mb-10 sm:mb-12 text-center md:text-left">
+          <SectionLabel number="05" name="Evidence Board" />
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Featured Projects
+            Evidence Board
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
@@ -67,34 +70,52 @@ export const Projects: React.FC = () => {
                     </h3>
                   </div>
 
-                  {/* Problem Statement */}
+                  {/* PROBLEM */}
                   <div>
-                    <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400">
-                      The Problem
+                    <h4 className="text-[9px] sm:text-[10px] font-mono font-semibold uppercase tracking-widest text-violet-500/60 mb-1">
+                      Problem
                     </h4>
-                    <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                       {project.problem}
                     </p>
                   </div>
 
-                  {/* What I Built */}
+                  {/* BUILD */}
                   <div>
-                    <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400">
-                      What I Built
+                    <h4 className="text-[9px] sm:text-[10px] font-mono font-semibold uppercase tracking-widest text-violet-500/60 mb-1">
+                      Build
                     </h4>
-                    <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                       {project.whatIBuilt}
                     </p>
                   </div>
 
-                  {/* Outcome / Learning */}
-                  <div className="rounded-xl bg-slate-950/40 border border-slate-900/60 p-3.5 sm:p-4">
-                    <h4 className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-violet-400">
-                      Impact & Learnings
-                    </h4>
-                    <p className="text-slate-300 text-xs sm:text-sm mt-1 leading-relaxed">
-                      {project.outcome}
-                    </p>
+                  {/* EVIDENCE + PRODUCT LEARNING — combined box */}
+                  <div className="rounded-xl bg-slate-950/40 border border-slate-900/60 p-3.5 sm:p-4 space-y-3">
+                    {/* Evidence */}
+                    <div>
+                      <h4 className="text-[9px] sm:text-[10px] font-mono font-semibold uppercase tracking-widest text-violet-400 mb-1">
+                        Evidence
+                      </h4>
+                      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        {project.outcome}
+                      </p>
+                    </div>
+
+                    {/* Product Learning */}
+                    <div className="pt-2 border-t border-slate-800/50">
+                      <div className="flex items-start gap-2">
+                        <Lightbulb className="h-3.5 w-3.5 text-fuchsia-400/70 mt-0.5 shrink-0" />
+                        <div>
+                          <h4 className="text-[9px] sm:text-[10px] font-mono font-semibold uppercase tracking-widest text-fuchsia-400/70 mb-1">
+                            Product Learning
+                          </h4>
+                          <p className="text-slate-400 text-xs leading-relaxed italic">
+                            {project.productLearning}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Tech Stack Pills */}

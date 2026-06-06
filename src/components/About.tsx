@@ -1,6 +1,7 @@
 import React from "react";
 import { User, Briefcase, Code } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionLabel } from "./SectionLabel";
 
 export const About: React.FC = () => {
   const { about } = portfolioData.personalInfo;
@@ -13,6 +14,7 @@ export const About: React.FC = () => {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mb-10 sm:mb-12 text-center md:text-left">
+          <SectionLabel number="02" name="Profile" />
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             About Me
           </h2>

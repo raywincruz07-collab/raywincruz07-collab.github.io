@@ -8,19 +8,34 @@ import {
   Brain,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionLabel } from "./SectionLabel";
 
 export const Hero: React.FC = () => {
   const { name, location, heroSummary } = portfolioData.personalInfo;
 
   return (
-    <section className="relative overflow-hidden pt-16 pb-12 md:pt-32 md:pb-24 flex flex-col justify-center border-b border-slate-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-950/20 via-slate-950 to-slate-950">
+    <section
+      id="hero"
+      className="relative overflow-hidden pt-16 pb-12 md:pt-32 md:pb-24 flex flex-col justify-center border-b border-slate-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-950/20 via-slate-950 to-slate-950"
+    >
       {/* Decorative subtle ambient lights */}
       <div className="absolute top-0 left-1/4 -z-10 h-72 w-72 rounded-full bg-violet-600/10 blur-3xl pointer-events-none"></div>
       <div className="absolute top-12 right-1/4 -z-10 h-96 w-96 rounded-full bg-fuchsia-600/5 blur-3xl pointer-events-none"></div>
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center w-full">
+        {/* Section Label */}
+        <div className="flex justify-center mb-4">
+          <SectionLabel number="01" name="Command Center" />
+        </div>
+
+        {/* Status Badge */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/5 px-3 py-1 text-xs font-medium text-violet-300 mb-4">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          <span className="font-mono tracking-wider text-[10px] uppercase">Technical AI Product Profile</span>
+        </div>
+
         {/* Location Badge */}
-        <div className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1 text-xs font-medium text-slate-400 mb-6 hover:border-violet-500/30 transition-colors">
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1 text-xs font-medium text-slate-400 mb-6 hover:border-violet-500/30 transition-colors ml-2">
           <MapPin className="h-3.5 w-3.5 text-violet-400" />
           <span>{location}</span>
         </div>

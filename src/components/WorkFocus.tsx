@@ -1,5 +1,6 @@
 import React from "react";
 import { Compass, Cpu, FileText, Brain } from "lucide-react";
+import { SectionLabel } from "./SectionLabel";
 
 export const WorkFocus: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ export const WorkFocus: React.FC = () => {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mb-10 sm:mb-12 text-center md:text-left">
+          <SectionLabel number="03" name="Product Operating System" />
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Product + Technical Focus
           </h2>

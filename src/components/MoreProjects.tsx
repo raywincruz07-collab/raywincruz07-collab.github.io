@@ -1,5 +1,6 @@
 import React from "react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionLabel } from "./SectionLabel";
 
 export const MoreProjects: React.FC = () => {
   const { moreProjects } = portfolioData;
@@ -27,8 +28,9 @@ export const MoreProjects: React.FC = () => {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mb-10 text-center md:text-left">
+          <SectionLabel number="05" name="Project Archive" />
           <h2 className="text-2xl font-bold tracking-tight text-slate-200 sm:text-3xl">
-            More Projects
+            Project Archive
           </h2>
           <div className="mt-2 h-0.5 w-10 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs max-w-3xl leading-relaxed">

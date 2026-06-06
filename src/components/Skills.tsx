@@ -7,6 +7,7 @@ import {
   Briefcase,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionLabel } from "./SectionLabel";
 
 export const Skills: React.FC = () => {
   const { skills } = portfolioData;
@@ -53,8 +54,11 @@ export const Skills: React.FC = () => {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="mb-10 sm:mb-12 text-center">
+          <div className="flex justify-center">
+            <SectionLabel number="04" name="Capability Stack" />
+          </div>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Technical Skillset
+            Capability Stack
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
           <p className="mt-4 text-xs sm:text-sm text-slate-400 max-w-md mx-auto px-2">
