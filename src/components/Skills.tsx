@@ -1,5 +1,11 @@
-import React from "react";
-import { Terminal, Database, Brain, Cpu, Wrench } from "lucide-react";
+import {
+  Terminal,
+  Database,
+  Brain,
+  Cpu,
+  Wrench,
+  Briefcase,
+} from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
 export const Skills: React.FC = () => {
@@ -7,13 +13,15 @@ export const Skills: React.FC = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
+      case "product management / ai product":
+        return <Briefcase className="h-5 w-5 text-violet-400" />;
       case "programming":
         return <Terminal className="h-5 w-5 text-violet-400" />;
       case "data science / ml":
         return <Brain className="h-5 w-5 text-fuchsia-400" />;
       case "genai / rag":
         return <Cpu className="h-5 w-5 text-purple-400" />;
-      case "data engineering":
+      case "data / cloud systems":
         return <Database className="h-5 w-5 text-indigo-400" />;
       default:
         return <Wrench className="h-5 w-5 text-pink-400" />;
@@ -22,13 +30,15 @@ export const Skills: React.FC = () => {
 
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {
+      case "product management / ai product":
+        return "border-violet-500/20 hover:border-violet-500/40 bg-violet-950/5";
       case "programming":
         return "border-violet-500/20 hover:border-violet-500/40 bg-violet-950/5";
       case "data science / ml":
         return "border-fuchsia-500/20 hover:border-fuchsia-500/40 bg-fuchsia-950/5";
       case "genai / rag":
         return "border-purple-500/20 hover:border-purple-500/40 bg-purple-950/5";
-      case "data engineering":
+      case "data / cloud systems":
         return "border-indigo-500/20 hover:border-indigo-500/40 bg-indigo-950/5";
       default:
         return "border-pink-500/20 hover:border-pink-500/40 bg-pink-950/5";

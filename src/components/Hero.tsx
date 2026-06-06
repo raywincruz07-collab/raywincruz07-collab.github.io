@@ -1,11 +1,11 @@
 import {
-  GraduationCap,
   MapPin,
   Briefcase,
   ArrowDown,
   FileText,
   Cloud,
   Cpu,
+  Brain,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
@@ -36,11 +36,11 @@ export const Hero: React.FC = () => {
         {/* Subtitle / Positioning */}
         <p className="text-sm sm:text-xl md:text-2xl font-semibold text-slate-300 max-w-3xl mx-auto mb-6 tracking-wide leading-relaxed px-4">
           <span className="block sm:inline">
-            M.Sc. Data Science &middot; AI Product Management
+            AI Product Management &middot; GenAI/RAG
           </span>
           <span className="hidden sm:inline"> &middot; </span>
           <span className="block sm:inline mt-1 sm:mt-0">
-            SAP HANA Cloud &middot; GenAI/RAG
+            Data Science &middot; Cloud Data Systems
           </span>
         </p>
 
@@ -79,48 +79,48 @@ export const Hero: React.FC = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl mx-auto px-2 sm:px-0">
           <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
-            <GraduationCap className="h-5 w-5 text-violet-400 mb-1.5" />
+            <Briefcase className="h-5 w-5 text-violet-400 mb-1.5" />
             <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              Education
-            </span>
-            <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
-              M.Sc. Data Science
-            </span>
-          </div>
-          <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
-            <GraduationCap className="h-5 w-5 text-fuchsia-400 mb-1.5" />
-            <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              University
-            </span>
-            <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
-              Mannheim
-            </span>
-          </div>
-          <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors col-span-1 sm:col-span-2 lg:col-span-1">
-            <Cloud className="h-5 w-5 text-indigo-400 mb-1.5" />
-            <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              Platform
-            </span>
-            <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
-              SAP HANA Cloud
-            </span>
-          </div>
-          <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
-            <Briefcase className="h-5 w-5 text-purple-400 mb-1.5" />
-            <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              Current Role
+              Product Focus
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
               AI Product Management
             </span>
           </div>
           <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
-            <Cpu className="h-5 w-5 text-pink-400 mb-1.5" />
+            <Brain className="h-5 w-5 text-fuchsia-400 mb-1.5" />
             <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
-              Focus Area
+              Technical Base
             </span>
             <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
-              GenAI/RAG Projects
+              Data Science & GenAI
+            </span>
+          </div>
+          <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors col-span-1 sm:col-span-2 lg:col-span-1">
+            <Cloud className="h-5 w-5 text-indigo-400 mb-1.5" />
+            <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
+              Platform Context
+            </span>
+            <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
+              SAP HANA Cloud
+            </span>
+          </div>
+          <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
+            <Cpu className="h-5 w-5 text-purple-400 mb-1.5" />
+            <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
+              Project Proof
+            </span>
+            <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
+              RAG / ML / Analytics
+            </span>
+          </div>
+          <div className="flex flex-col items-center p-3 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm hover:border-slate-800 transition-colors">
+            <MapPin className="h-5 w-5 text-pink-400 mb-1.5" />
+            <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
+              Location
+            </span>
+            <span className="text-xs sm:text-sm font-semibold text-slate-200 leading-tight">
+              Germany-based
             </span>
           </div>
         </div>

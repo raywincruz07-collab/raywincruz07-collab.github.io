@@ -50,26 +50,37 @@ export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Raywin Cruz",
     positioning:
-      "M.Sc. Data Science · AI Product Management · SAP HANA Cloud · GenAI/RAG",
+      "AI Product Management · GenAI/RAG · Data Science · Cloud Data Systems",
     location: "University of Mannheim · Germany",
     heroSummary:
-      "I combine AI product thinking with hands-on data science to evaluate GenAI/RAG workflows, structure product-relevant insights, and build practical AI/data projects with Python, SQL, and modern evaluation methods.",
+      "I combine AI product thinking with hands-on data science and GenAI/RAG implementation. My work focuses on researching AI use cases, evaluating technical feasibility, building practical AI/data prototypes, and translating technical findings into clear product direction.",
     stats: [
-      "M.Sc. Data Science",
-      "University of Mannheim",
-      "SAP HANA Cloud",
       "AI Product Management",
-      "GenAI/RAG Projects",
+      "Data Science & GenAI",
+      "SAP HANA Cloud",
+      "RAG / ML / Analytics",
+      "Germany-based",
     ],
     about:
-      "I am a Master’s student in Data Science at the University of Mannheim, currently working in AI Product Management related to SAP HANA Cloud. My work sits between technical AI understanding and product thinking: researching AI capabilities, evaluating product-relevant use cases, documenting findings clearly, and connecting GenAI/RAG concepts with practical cloud data workflows.",
+      "I am a Master’s student in Data Science at the University of Mannheim, currently working in AI Product Management related to SAP HANA Cloud. I position myself as a technical AI product profile: someone who can understand AI capabilities, evaluate feasibility, work with data and GenAI/RAG systems, and translate technical findings into product decisions, documentation, and stakeholder-ready insights.",
     email: "raywincruz2003@gmail.com",
     linkedin: "https://www.linkedin.com/in/raywincruz",
     github: "https://github.com/raywincruz07-collab",
     message:
-      "Currently focused on AI product management, SAP HANA Cloud, GenAI/RAG evaluation, and data-driven product workflows.",
+      "Focused on AI Product Management with hands-on strength in GenAI/RAG, data science, AI evaluation, and cloud data product workflows.",
   },
   skills: [
+    {
+      category: "Product Management / AI Product",
+      skills: [
+        "AI use-case research",
+        "product requirements",
+        "stakeholder communication",
+        "technical documentation",
+        "feasibility evaluation",
+        "product-oriented analysis",
+      ],
+    },
     {
       category: "Programming",
       skills: ["Python", "SQL", "TypeScript basics", "JavaScript"],
@@ -80,9 +91,11 @@ export const portfolioData: PortfolioData = {
         "pandas",
         "NumPy",
         "scikit-learn",
-        "data preprocessing",
+        "preprocessing",
+        "classification",
         "model evaluation",
         "data mining",
+        "fairness analysis",
       ],
     },
     {
@@ -90,29 +103,31 @@ export const portfolioData: PortfolioData = {
       skills: [
         "LLMs",
         "prompt engineering",
-        "RAG evaluation",
+        "retrieval evaluation",
         "embeddings",
         "vector search",
-        "LangChain/LangGraph basics",
+        "RAG evaluation",
+        "hallucination-aware evaluation",
       ],
     },
     {
-      category: "Data Engineering",
+      category: "Data / Cloud Systems",
       skills: [
         "APIs",
         "ETL workflows",
         "PostgreSQL basics",
         "data validation",
         "Docker basics",
+        "cloud data workflows",
       ],
     },
     {
-      category: "Tools & BI",
+      category: "Tools",
       skills: [
         "Git",
         "GitHub",
         "Jupyter",
-        "VS Code / Antigravity",
+        "VS Code/Antigravity",
         "Power BI",
         "Tableau",
       ],
@@ -301,7 +316,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "AI Product Management — SAP HANA Cloud",
       description:
-        "Current focus on AI product workflows, use-case research, technical evaluation, stakeholder communication, and product-oriented AI understanding.",
+        "Current focus on AI product workflows, use-case research, technical feasibility evaluation, stakeholder communication, documentation, and product-oriented AI understanding.",
       period: "Current",
     },
     {

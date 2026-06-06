@@ -18,7 +18,8 @@ export const Journey: React.FC = () => {
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-md mx-auto px-2">
-            A focused path from data science foundations to AI product management, GenAI/RAG evaluation, and cloud data product work in Germany.
+            A path combining AI product management, data science, GenAI/RAG
+            evaluation, and hands-on technical project execution.
           </p>
         </div>
 

@@ -35,11 +35,12 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-200 text-sm sm:text-base">
-                    Product-Oriented AI
+                    Product Management Core
                   </h4>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                    Translating AI capabilities, use cases, and technical
-                    findings into clear product direction.
+                    Researching use cases, structuring requirements, evaluating
+                    feasibility, and translating technical findings into product
+                    direction.
                   </p>
                 </div>
               </div>
@@ -50,11 +51,12 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-200 text-sm sm:text-base">
-                    Hands-on Technical Base
+                    Technical Execution Base
                   </h4>
                   <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                    Building and evaluating AI/data projects around GenAI, RAG,
-                    data mining, and cloud data workflows.
+                    Building and evaluating AI/data projects using Python, SQL,
+                    machine learning, retrieval workflows, and analytics
+                    methods.
                   </p>
                 </div>
               </div>
@@ -74,10 +76,11 @@ export const About: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-100 text-base sm:text-lg">
-                    Current Profile
+                    Technical AI Product Profile
                   </h3>
                   <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5 leading-tight">
-                    M.Sc. Data Science &middot; AI Product Management
+                    AI Product Management &middot; Data Science &middot;
+                    GenAI/RAG
                   </p>
                 </div>
               </div>
@@ -85,21 +88,28 @@ export const About: React.FC = () => {
               <ul className="space-y-3.5 text-xs sm:text-sm text-slate-300">
                 <li className="flex items-start gap-2.5">
                   <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
-                  <span>Master’s student at the University of Mannheim</span>
+                  <span>
+                    Current focus: AI Product Management related to SAP HANA
+                    Cloud
+                  </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
                   <span>
-                    Current focus: AI Product Management and SAP HANA Cloud
+                    Strong technical base in data science, ML evaluation, and
+                    GenAI/RAG workflows
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
+                  <span>
+                    Able to connect product requirements with technical
+                    feasibility
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
                   <span>Germany-based with working-student authorization</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <div className="h-1.5 w-1.5 rounded-full bg-violet-400 mt-2 shrink-0" />
-                  <span>Working language: English</span>
                 </li>
               </ul>
             </div>
