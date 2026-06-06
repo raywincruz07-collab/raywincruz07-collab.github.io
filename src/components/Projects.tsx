@@ -40,9 +40,7 @@ export const Projects: React.FC = () => {
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
-            Selected AI, data science, and GenAI/RAG projects focused on
-            evaluation, retrieval quality, data workflows, and practical product
-            thinking.
+            Selected projects that show practical work across GenAI/RAG evaluation, data mining, NLP, system design, and product-oriented AI thinking.
           </p>
         </div>
 

@@ -32,9 +32,7 @@ export const MoreProjects: React.FC = () => {
           </h2>
           <div className="mt-2 h-0.5 w-10 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs max-w-3xl leading-relaxed">
-            Additional academic, AI, data science, and software projects showing
-            breadth across machine learning, analytics, NLP, data integration,
-            and product-oriented AI work.
+            Additional academic, analytics, and AI/data projects showing breadth across machine learning, NLP, data integration, knowledge organization, and business reporting.
           </p>
         </div>
 

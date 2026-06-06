@@ -58,8 +58,7 @@ export const Contact: React.FC = () => {
           </h2>
           <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
           <p className="mt-4 text-slate-400 text-xs sm:text-sm max-w-xl">
-            Interested in discussing opportunities? Feel free to reach out
-            directly through any of the channels below.
+            For relevant AI product, data science, GenAI/RAG, or cloud data product conversations, reach me directly through the channels below.
           </p>
         </div>
 
@@ -203,7 +202,7 @@ export const Contact: React.FC = () => {
                     GitHub
                   </h4>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                    Check source repositories for RAG and ML systems.
+                    Explore public repositories covering RAG evaluation, AI product development, data mining, analytics, and system design projects.
                   </p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-400 mt-4">
@@ -227,7 +226,7 @@ export const Contact: React.FC = () => {
                     Download CV
                   </h4>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                    Save a copy of my curriculum vitae (PDF format).
+                    Download my CV for a concise overview of my education, SAP HANA Cloud focus, technical skills, and project portfolio.
                   </p>
                 </div>
                 <span className="text-[11px] font-semibold text-slate-400 mt-4">

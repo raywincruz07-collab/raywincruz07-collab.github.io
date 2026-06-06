@@ -53,7 +53,7 @@ export const portfolioData: PortfolioData = {
       "M.Sc. Data Science · AI Product Management · SAP HANA Cloud · GenAI/RAG",
     location: "University of Mannheim · Germany",
     heroSummary:
-      "I work at the intersection of AI product management, data science, and cloud data systems. My focus is turning AI capabilities into practical product workflows through research, evaluation, clear documentation, and hands-on technical understanding.",
+      "I combine AI product thinking with hands-on data science to evaluate GenAI/RAG workflows, structure product-relevant insights, and build practical AI/data projects with Python, SQL, and modern evaluation methods.",
     stats: [
       "M.Sc. Data Science",
       "University of Mannheim",
@@ -67,7 +67,7 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://www.linkedin.com/in/raywincruz",
     github: "https://github.com/raywincruz07-collab",
     message:
-      "Open to meaningful conversations around AI product, data science, GenAI/RAG, and cloud data product work where technical understanding and product thinking both matter.",
+      "Currently focused on AI product management, SAP HANA Cloud, GenAI/RAG evaluation, and data-driven product workflows.",
   },
   skills: [
     {
@@ -286,19 +286,19 @@ export const portfolioData: PortfolioData = {
     {
       title: "AI Product Management — SAP HANA Cloud",
       description:
-        "Focus: AI product workflows, use-case research, technical evaluation, stakeholder communication, and product-oriented AI understanding.",
+        "Current focus on AI product workflows, use-case research, technical evaluation, stakeholder communication, and product-oriented AI understanding.",
       period: "Current",
     },
     {
       title: "M.Sc. Data Science — University of Mannheim",
       description:
-        "Focus on Data Mining, Machine Learning, and Practical AI systems.",
+        "Graduate studies focused on data mining, machine learning, data management, responsible AI, and applied data science projects.",
       period: "Current",
     },
     {
-      title: "AI / Data Science Project Work",
+      title: "AI/Data Project Portfolio",
       description:
-        "Developing hands-on RAG systems, building clean evaluation pipelines, and exploring open-source LLM alignment.",
+        "Built academic and personal projects around RAG evaluation, NLP, data mining, logistics systems, knowledge organization, and analytics workflows.",
     },
     {
       title: "Internship & Practical Experience",

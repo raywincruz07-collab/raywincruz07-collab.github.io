@@ -18,10 +18,7 @@ export const WorkFocus: React.FC = () => {
             AI Product Management &middot; SAP HANA Cloud
           </p>
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
-            I currently work in AI Product Management related to SAP HANA Cloud,
-            where my focus is on understanding AI capabilities, researching
-            product-relevant use cases, evaluating technical feasibility, and
-            translating findings into clear product-oriented direction.
+            My current focus is AI Product Management related to SAP HANA Cloud. I work on understanding AI capabilities, researching product-relevant use cases, evaluating technical feasibility, and translating findings into clear, structured product-oriented direction.
           </p>
         </div>
 
@@ -36,8 +33,7 @@ export const WorkFocus: React.FC = () => {
               AI Use-Case Research
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Exploring where AI and GenAI can create practical value in cloud
-              data workflows.
+              Researching where AI and GenAI can create practical value in cloud data and enterprise product workflows.
             </p>
           </div>
 
@@ -50,8 +46,7 @@ export const WorkFocus: React.FC = () => {
               Technical Evaluation
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Understanding AI concepts, evaluating feasibility, and connecting
-              technical behavior with product needs.
+              Connecting technical AI behavior, feasibility, and limitations with product requirements and user needs.
             </p>
           </div>
 
@@ -64,8 +59,7 @@ export const WorkFocus: React.FC = () => {
               Product Communication
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Turning technical findings into clear summaries, structured
-              documentation, and stakeholder-friendly explanations.
+              Turning technical findings into clear documentation, summaries, and stakeholder-friendly product insights.
             </p>
           </div>
 
@@ -78,8 +72,7 @@ export const WorkFocus: React.FC = () => {
               GenAI/RAG Understanding
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Building hands-on understanding of retrieval, evaluation, prompts,
-              and AI workflow design through academic and personal projects.
+              Building hands-on understanding of retrieval, prompts, evaluation, and AI workflow design through academic and personal projects.
             </p>
           </div>
         </div>
