@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
   const { name } = portfolioData.personalInfo;
 
   return (
-    <footer className="bg-slate-950 py-12 border-t border-slate-900">
+    <footer className="bg-transparent py-12 border-t border-slate-900">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo / Copyright */}

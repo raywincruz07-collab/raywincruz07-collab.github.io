@@ -19,8 +19,14 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #030712; /* bg-slate-950 */
-    color: #f8fafc; /* text-slate-50 */
+    background-color: #050816;
+    background-image: 
+      radial-gradient(circle at 80% 10%, rgba(139, 92, 246, 0.15), transparent 45%),
+      radial-gradient(circle at 20% 80%, rgba(34, 211, 238, 0.12), transparent 45%),
+      radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 28px 28px;
+    background-position: 0 0, 0 0, 0 0;
+    color: #f8fafc;
     font-family:
       ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

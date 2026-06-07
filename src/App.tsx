@@ -11,7 +11,7 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-violet-500/30 selection:text-violet-200 overflow-x-hidden">
+    <div className="min-h-screen bg-transparent text-slate-100 flex flex-col selection:bg-violet-500/30 selection:text-violet-200 overflow-x-hidden">
       {/* Sticky Header Navigation */}
       <Navbar />
 

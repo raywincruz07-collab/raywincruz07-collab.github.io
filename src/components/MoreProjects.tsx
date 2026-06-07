@@ -22,7 +22,7 @@ export const MoreProjects: React.FC = () => {
   return (
     <section
       id="more-projects"
-      className="py-16 bg-slate-950 border-b border-slate-900 scroll-mt-16"
+      className="py-16 bg-transparent border-b border-slate-900 scroll-mt-16"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}

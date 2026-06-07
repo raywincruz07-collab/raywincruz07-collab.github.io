@@ -8,22 +8,15 @@ import {
   Brain,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
-import { NeuralNetworkBackground } from "./NeuralNetworkBackground";
 
 export const Hero: React.FC = () => {
   const { name, location, heroSummary } = portfolioData.personalInfo;
 
   return (
-    <section className="relative overflow-hidden pt-16 pb-12 md:pt-32 md:pb-24 flex flex-col justify-center border-b border-slate-900 bg-slate-950">
-      {/* 3D Background */}
-      <NeuralNetworkBackground />
-
-      {/* Dark gradient overlay for readability (darker on left, transparent on right) */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/20 pointer-events-none"></div>
-
+    <section className="relative overflow-hidden pt-16 pb-12 md:pt-32 md:pb-24 flex flex-col justify-center border-b border-slate-900 bg-transparent">
       {/* Decorative subtle ambient lights */}
       <div className="absolute top-0 left-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/10 blur-3xl pointer-events-none"></div>
-      <div className="absolute top-12 right-1/4 z-0 h-96 w-96 rounded-full bg-fuchsia-600/5 blur-3xl pointer-events-none"></div>
+      <div className="absolute top-12 right-1/4 z-0 h-96 w-96 rounded-full bg-cyan-600/5 blur-3xl pointer-events-none"></div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center w-full">
         {/* Location Badge */}
