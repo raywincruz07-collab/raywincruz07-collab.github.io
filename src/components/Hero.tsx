@@ -8,17 +8,24 @@ import {
   Brain,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { NeuralNetworkBackground } from "./NeuralNetworkBackground";
 
 export const Hero: React.FC = () => {
   const { name, location, heroSummary } = portfolioData.personalInfo;
 
   return (
-    <section className="relative overflow-hidden pt-16 pb-12 md:pt-32 md:pb-24 flex flex-col justify-center border-b border-slate-900 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-950/20 via-slate-950 to-slate-950">
-      {/* Decorative subtle ambient lights */}
-      <div className="absolute top-0 left-1/4 -z-10 h-72 w-72 rounded-full bg-violet-600/10 blur-3xl pointer-events-none"></div>
-      <div className="absolute top-12 right-1/4 -z-10 h-96 w-96 rounded-full bg-fuchsia-600/5 blur-3xl pointer-events-none"></div>
+    <section className="relative overflow-hidden pt-16 pb-12 md:pt-32 md:pb-24 flex flex-col justify-center border-b border-slate-900 bg-slate-950">
+      {/* 3D Background */}
+      <NeuralNetworkBackground />
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center w-full">
+      {/* Dark gradient overlay for readability (darker on left, transparent on right) */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/20 pointer-events-none"></div>
+
+      {/* Decorative subtle ambient lights */}
+      <div className="absolute top-0 left-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/10 blur-3xl pointer-events-none"></div>
+      <div className="absolute top-12 right-1/4 z-0 h-96 w-96 rounded-full bg-fuchsia-600/5 blur-3xl pointer-events-none"></div>
+
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center w-full">
         {/* Location Badge */}
         <div className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1 text-xs font-medium text-slate-400 mb-6 hover:border-violet-500/30 transition-colors">
           <MapPin className="h-3.5 w-3.5 text-violet-400" />

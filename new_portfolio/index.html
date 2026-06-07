@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raywin Cruz - Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --surface-elevated: #16161f;
+      --border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f0f0f5;
+      --text-secondary: #8888aa;
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.15);
+      --highlight: #22d3ee;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.25rem; }
+    h3 { font-size: 1.5rem; }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(10, 10, 15, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      display: block;
+      transition: 0.3s;
+    }
+
+    section {
+      padding: 100px 24px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .name-wrapper {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .name-underline {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--highlight));
+      animation: expand-line 1.5s ease forwards;
+    }
+
+    @keyframes expand-line {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-weight: 500;
+      min-height: 36px;
+    }
+    
+    .typewriter::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .hero-summary {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background-color: #4f46e5;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(99, 102, 241, 0.1);
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      align-items: center;
+    }
+    
+    .stats-row span:not(:last-child)::after {
+      content: '·';
+      margin-left: 16px;
+      color: var(--border);
+    }
+
+    .section-title {
+      margin-bottom: 48px;
+      font-size: 2.25rem;
+      color: var(--text-primary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(99, 102, 241, 0.12);
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+
+    .card .category {
+      color: var(--highlight);
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tech-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 6px;
+      padding: 2px 8px;
+      color: var(--text-primary);
+    }
+
+    .card-links {
+      display: flex;
+      gap: 16px;
+      margin-top: auto;
+    }
+
+    .card-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .card-links a:hover {
+      color: var(--accent);
+    }
+    
+    .card-links svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .skill-category h3 {
+      font-size: 1.125rem;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 20px;
+      padding: 6px 16px;
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .skill-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 16px rgba(99, 102, 241, 0.4);
+      background: rgba(99, 102, 241, 0.2);
+    }
+    
+    .journey-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-left: 2px solid var(--border);
+      padding-left: 24px;
+      margin-left: 12px;
+    }
+    
+    .journey-item {
+      position: relative;
+    }
+    
+    .journey-item::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+    }
+    
+    .journey-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+    
+    .journey-period {
+      color: var(--highlight);
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    
+    .journey-desc {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 120px 24px;
+    }
+
+    .email-link {
+      display: inline-block;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 48px;
+      transition: all 0.3s ease;
+      letter-spacing: -0.02em;
+    }
+
+    .email-link:hover {
+      text-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+      color: var(--accent);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .social-links a {
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+    
+    .social-links svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Animation Classes */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      section {
+        padding: 64px 20px;
+      }
+
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.875rem; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 15, 0.95);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 24px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-group {
+        flex-direction: column;
+      }
+      
+      .stats-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .stats-row span:not(:last-child)::after {
+        content: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <nav>
+    <div class="nav-content">
+      <a href="#" class="nav-brand">RC.</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="name-wrapper animate-on-scroll">
+          <h1>Raywin Cruz</h1>
+          <div class="name-underline"></div>
+        </div>
+        <div class="subtitle animate-on-scroll typewriter" id="typewriter"></div>
+        <p class="hero-summary animate-on-scroll">
+          I combine AI product thinking with hands-on data science and GenAI/RAG implementation. My work focuses on researching AI use cases, evaluating technical feasibility, building practical AI/data prototypes, and translating technical findings into clear product direction.
+        </p>
+        <div class="cta-group animate-on-scroll">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div class="stats-row animate-on-scroll">
+          <span>AI Product Management</span><span>Data Science & ML</span><span>SAP HANA Cloud</span><span>RAG / ML Evaluation</span><span>Germany-based</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="animate-on-scroll">
+      <h2 class="section-title">About Me</h2>
+      <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <p style="margin-bottom: 0; font-size: 1.05rem; color: var(--text-primary);">{portfolio_data['personalInfo']['about']}</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title animate-on-scroll">Selected Projects</h2>
+      <div class="grid">
+        
+        <div class="card animate-on-scroll">
+          <h3>Context Matters: Diversity-Aware Retrieval for RAG</h3>
+          <p><strong>Problem:</strong> Medical RAG systems depend heavily on retrieval quality. If the retrieved context is redundant, incomplete, or weak, the final answer can become less useful and more prone to hallucination.</p>
+          <p><strong>Solution:</strong> Built and evaluated a medical RAG baseline pipeline using PubMedQA. Compared BM25, DPR, Contriever, and ColBERTv2 retrieval methods with a fixed LLM generator to understand retrieval behavior before adding diversity-aware retrieval.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">PubMedQA</span><span class="tech-tag">BM25</span><span class="tech-tag">DPR</span><span class="tech-tag">Contriever</span><span class="tech-tag">ColBERTv2</span><span class="tech-tag">FAISS</span><span class="tech-tag">RAG evaluation</span><span class="tech-tag">Mannheim Maki API</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/raywincruz07-collab/Context-Matters-Evaluating-Diversity-Aware-Retrieval-for-RAG" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <h3>Discourse Analysis — AI Product Development Project</h3>
+          <p><strong>Problem:</strong> Public discourse is fragmented across platforms, making it hard to track narratives, spikes, and topic movement manually.</p>
+          <p><strong>Solution:</strong> Built a research-oriented discourse analysis platform with data collectors, database storage, analysis modules, FastAPI backend, and dashboard views for posts, trends, narratives, origin traces, and AI-assisted summaries.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">SQLite/PostgreSQL</span><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML/CSS</span><span class="tech-tag">trend analysis</span><span class="tech-tag">narrative analysis</span><span class="tech-tag">LLM-assisted Q&A</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/raywincruz07-collab/AI-PRODUCT-DEVELOPMENT-Discourse-Analysis" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <h3>AI-Based Logistics Management System</h3>
+          <p><strong>Problem:</strong> Logistics operations need better visibility into delivery delays, route context, operational KPIs, and decision-support signals.</p>
+          <p><strong>Solution:</strong> Designed an AI/data analytics logistics system that enriches shipment records with geolocation, route, and weather context to support delay-risk prediction and KPI monitoring.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">machine learning</span><span class="tech-tag">API enrichment</span><span class="tech-tag">Nominatim</span><span class="tech-tag">openrouteservice</span><span class="tech-tag">Open-Meteo</span><span class="tech-tag">Power BI</span><span class="tech-tag">KPI dashboards</span><span class="tech-tag">data pipeline design</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/raywincruz07-collab/ai_logistics_management_system" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <h3>Economic Framing Annotation</h3>
+          <p><strong>Problem:</strong> Large-scale immigration news analysis requires consistent identification of economic threat and economic benefit frames across thousands of paragraphs.</p>
+          <p><strong>Solution:</strong> Built a structured annotation pipeline for 10,000 German immigration news paragraphs using computational classification and validation against a human gold standard.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">R</span><span class="tech-tag">annotation pipeline</span><span class="tech-tag">prompt-based classification</span><span class="tech-tag">validation workflow</span><span class="tech-tag">human gold standard</span><span class="tech-tag">evaluation metrics</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/raywincruz07-collab/economic-framing-annotation" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <h3>Adult Income Prediction — Data Mining Project</h3>
+          <p><strong>Problem:</strong> Income classification from census-style data requires careful preprocessing, model comparison, evaluation, and fairness analysis.</p>
+          <p><strong>Solution:</strong> Built a supervised machine learning workflow using the UCI Adult dataset, including preprocessing, feature engineering, baseline modeling, tuned classifiers, ensemble comparison, and fairness checks.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">pandas</span><span class="tech-tag">scikit-learn</span><span class="tech-tag">XGBoost</span><span class="tech-tag">GridSearchCV</span><span class="tech-tag">classification</span><span class="tech-tag">fairness analysis</span><span class="tech-tag">model evaluation</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/hazarcs/IE500-DataMining-Project" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <section id="more-projects">
+      <h2 class="section-title animate-on-scroll">More Projects & Concepts</h2>
+      <div class="grid">
+
+        <div class="card animate-on-scroll">
+          <div class="category">GenAI / Product Enablement</div>
+          <h3>AI Developer Enablement Platform / Knowledge Hub</h3>
+          <p>Knowledge hub concept for AI guidance, use-case summaries, and practical enablement workflows.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">GenAI</span><span class="tech-tag">Prompt Engineering</span><span class="tech-tag">Documentation</span><span class="tech-tag">Product Research</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <div class="category">Data Engineering</div>
+          <h3>Web Data Integration Project</h3>
+          <p>Data integration project focused on collecting, transforming, and structuring web-based data sources.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">Data Integration</span><span class="tech-tag">APIs</span><span class="tech-tag">Data Cleaning</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <div class="category">Knowledge Graphs</div>
+          <h3>Knowledge Graph Recommender</h3>
+          <p>Recommender concept using structured relationships and graph-based reasoning.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Knowledge Graphs</span><span class="tech-tag">Recommendation</span><span class="tech-tag">Data Modeling</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <div class="category">Machine Learning</div>
+          <h3>Data Mining / Malware Classification</h3>
+          <p>Classification workflow for detecting malware patterns using data mining techniques.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">Classification</span><span class="tech-tag">Model Evaluation</span><span class="tech-tag">Data Mining</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <div class="category">Machine Learning</div>
+          <h3>Payment Fraud Detection</h3>
+          <p>Fraud detection workflow using supervised ML concepts, feature engineering, and evaluation metrics.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span><span class="tech-tag">pandas</span><span class="tech-tag">scikit-learn</span><span class="tech-tag">Fraud Detection</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <div class="category">Data Analytics</div>
+          <h3>Enterprise Analytics / KPI Reporting</h3>
+          <p>Analytics and reporting work involving dashboards, SQL, Excel, and BI-style operational insights.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">SQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">Tableau</span><span class="tech-tag">Excel</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+        <div class="card animate-on-scroll">
+          <div class="category">NLP</div>
+          <h3>Student Feedback Sentiment Analyzer</h3>
+          <p>Sentiment analysis concept for extracting feedback patterns from student comments.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">NLP</span><span class="tech-tag">Sentiment Analysis</span><span class="tech-tag">Python</span>
+          </div>
+          <div class="card-links">
+            
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title animate-on-scroll">Skills & Technologies</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category animate-on-scroll">
+          <h3>Product Management / AI Product</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">AI use-case research</span><span class="skill-pill">product requirements</span><span class="skill-pill">stakeholder communication</span><span class="skill-pill">technical documentation</span><span class="skill-pill">feasibility evaluation</span><span class="skill-pill">product-oriented analysis</span>
+          </div>
+        </div>
+    
+        <div class="skill-category animate-on-scroll">
+          <h3>Programming</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">TypeScript basics</span><span class="skill-pill">JavaScript</span>
+          </div>
+        </div>
+    
+        <div class="skill-category animate-on-scroll">
+          <h3>Data Science / ML</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">scikit-learn</span><span class="skill-pill">preprocessing</span><span class="skill-pill">classification</span><span class="skill-pill">model evaluation</span><span class="skill-pill">data mining</span><span class="skill-pill">fairness analysis</span>
+          </div>
+        </div>
+    
+        <div class="skill-category animate-on-scroll">
+          <h3>GenAI / RAG</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">LLMs</span><span class="skill-pill">prompt engineering</span><span class="skill-pill">retrieval evaluation</span><span class="skill-pill">embeddings</span><span class="skill-pill">vector search</span><span class="skill-pill">RAG evaluation</span><span class="skill-pill">hallucination-aware evaluation</span>
+          </div>
+        </div>
+    
+        <div class="skill-category animate-on-scroll">
+          <h3>Data / Cloud Systems</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">APIs</span><span class="skill-pill">ETL workflows</span><span class="skill-pill">PostgreSQL basics</span><span class="skill-pill">data validation</span><span class="skill-pill">Docker basics</span><span class="skill-pill">cloud data workflows</span>
+          </div>
+        </div>
+    
+        <div class="skill-category animate-on-scroll">
+          <h3>Tools & BI</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span><span class="skill-pill">GitHub</span><span class="skill-pill">Jupyter</span><span class="skill-pill">VS Code/Antigravity</span><span class="skill-pill">Power BI</span><span class="skill-pill">Tableau</span>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title animate-on-scroll">Journey</h2>
+      <div class="journey-list">
+
+        <div class="journey-item animate-on-scroll">
+          <h3>AI Product Management — SAP HANA Cloud</h3>
+          <span class="journey-period">Current</span>
+          <p class="journey-desc">Current focus on AI product workflows, use-case research, technical feasibility evaluation, stakeholder communication, documentation, and product-oriented AI understanding.</p>
+        </div>
+    
+        <div class="journey-item animate-on-scroll">
+          <h3>M.Sc. Data Science — University of Mannheim</h3>
+          <span class="journey-period">Current</span>
+          <p class="journey-desc">Graduate studies focused on data mining, machine learning, data management, responsible AI, and applied data science projects.</p>
+        </div>
+    
+        <div class="journey-item animate-on-scroll">
+          <h3>AI/Data Project Portfolio</h3>
+          
+          <p class="journey-desc">Built academic and personal projects around RAG evaluation, NLP, data mining, logistics systems, knowledge organization, and analytics workflows.</p>
+        </div>
+    
+        <div class="journey-item animate-on-scroll">
+          <h3>Internship & Practical Experience</h3>
+          
+          <p class="journey-desc">Gaining experience in database schemas, ETL pipelines, and dashboard visualization.</p>
+        </div>
+    
+      </div>
+    </section>
+
+    <section id="contact" class="contact animate-on-scroll">
+      <a href="mailto:raywincruz2003@gmail.com" class="email-link">raywincruz2003@gmail.com</a>
+      <div class="social-links">
+        <a href="https://github.com/raywincruz07-collab" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/raywincruz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Raywin Cruz. Built with precision.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script>
+    // --- Typewriter Effect ---
+    const roles = ["AI Product Manager", "Data Scientist", "SAP HANA Engineer"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const subtitleEl = document.getElementById("typewriter");
+
+    function typeWriter() {
+      const currentRole = roles[roleIndex];
+      
+      if (isDeleting) {
+        charIndex--;
+      } else {
+        charIndex++;
+      }
+      
+      subtitleEl.textContent = currentRole.substring(0, charIndex);
+      
+      let typingSpeed = isDeleting ? 50 : 100;
+      
+      if (!isDeleting && charIndex === currentRole.length) {
+        typingSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingSpeed = 500;
+      }
+      
+      setTimeout(typeWriter, typingSpeed);
+    }
+    
+    setTimeout(typeWriter, 500);
+
+    // --- Intersection Observer for Scroll Animations ---
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+      el.style.transitionDelay = `${(index % 10) * 0.1}s`;
+      observer.observe(el);
+    });
+
+    // --- Mobile Nav ---
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // --- Smooth Scroll ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // --- Three.js Background ---
+    const canvas = document.getElementById('bg-canvas');
+    const scene = new THREE.Scene();
+    
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+    
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Particle Field
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 600 : 1200;
+    const particlesGeometry = new THREE.BufferGeometry();
+    const posArray = new Float32Array(particleCount * 3);
+    const initialPosArray = new Float32Array(particleCount * 3);
+    
+    for(let i = 0; i < particleCount * 3; i++) {
+      // Spread particles
+      posArray[i] = (Math.random() - 0.5) * 15;
+      initialPosArray[i] = posArray[i];
+    }
+    
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    
+    // Create a circular texture for particles programmatically to act as "small sphere geometry"
+    const circleCanvas = document.createElement('canvas');
+    circleCanvas.width = 32;
+    circleCanvas.height = 32;
+    const ctx = circleCanvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(16, 16, 16, 0, Math.PI * 2);
+    ctx.fillStyle = '#ffffff';
+    ctx.fill();
+    const particleTexture = new THREE.CanvasTexture(circleCanvas);
+
+    const particlesMaterial = new THREE.PointsMaterial({
+      size: 0.05,
+      map: particleTexture,
+      transparent: true,
+      opacity: 0.4,
+      color: 0x6366f1,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false
+    });
+    
+    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particlesMesh);
+
+    // Wireframe Icosahedron
+    const icoGeometry = new THREE.IcosahedronGeometry(1.4, 1);
+    const icoMaterial = new THREE.MeshBasicMaterial({
+      color: 0x22d3ee,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.12
+    });
+    const icosahedron = new THREE.Mesh(icoGeometry, icoMaterial);
+    icosahedron.position.set(2, 0, -2);
+    scene.add(icosahedron);
+
+    // Mouse Interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+
+    document.addEventListener('mousemove', (event) => {
+      mouseX = (event.clientX / window.innerWidth) - 0.5;
+      mouseY = (event.clientY / window.innerHeight) - 0.5;
+    });
+
+    // Window Resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Animation Loop
+    let time = 0;
+    let isAnimating = true;
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        isAnimating = false;
+      } else {
+        isAnimating = true;
+        animate();
+      }
+    });
+
+    function animate() {
+      if (!isAnimating) return;
+      requestAnimationFrame(animate);
+      
+      time += 0.01;
+      
+      // Organic particle drift
+      const positions = particlesMesh.geometry.attributes.position.array;
+      for(let i = 0; i < particleCount; i++) {
+        const i3 = i * 3;
+        positions[i3] = initialPosArray[i3] + 0.5 * Math.sin(time * 0.5 + initialPosArray[i3+1]);
+        positions[i3+1] = initialPosArray[i3+1] + 0.5 * Math.cos(time * 0.5 + initialPosArray[i3]);
+      }
+      particlesMesh.geometry.attributes.position.needsUpdate = true;
+      
+      // Rotate Icosahedron
+      icosahedron.rotation.y += 0.003;
+      icosahedron.rotation.x += 0.001;
+      
+      // Camera Parallax
+      targetX = mouseX * 0.8;
+      targetY = -mouseY * 0.8;
+      
+      camera.position.x += (targetX - camera.position.x) * 0.05;
+      camera.position.y += (targetY - camera.position.y) * 0.05;
+      camera.lookAt(scene.position);
+      
+      renderer.render(scene, camera);
+    }
+    
+    animate();
+  </script>
+</body>
+</html>
