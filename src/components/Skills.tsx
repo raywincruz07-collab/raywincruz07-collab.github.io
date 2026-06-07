@@ -7,6 +7,8 @@ import {
   Briefcase,
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionHeader } from "./SectionHeader";
+import { FadeIn } from "./FadeIn";
 
 export const Skills: React.FC = () => {
   const { skills } = portfolioData;
@@ -56,46 +58,45 @@ export const Skills: React.FC = () => {
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="mb-10 sm:mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Technical Skillset
-          </h2>
-          <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto"></div>
-          <p className="mt-4 text-xs sm:text-sm text-slate-400 max-w-md mx-auto px-2">
-            Practical tools and methodologies applied throughout M.Sc.
-            coursework and project developments.
-          </p>
-        </div>
+        <FadeIn>
+          <SectionHeader 
+            eyebrow="Toolkit" 
+            heading="Technical Skillset" 
+            subtitle="Practical tools and methodologies applied throughout M.Sc. coursework and project developments."
+            alignment="center"
+          />
+        </FadeIn>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {skills.map((group) => (
-            <div
-              key={group.category}
-              className={`rounded-2xl border p-5 sm:p-6 backdrop-blur-sm transition-all duration-300 ${getCategoryColor(group.category)}`}
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-3 mb-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 border border-slate-800">
-                  {getCategoryIcon(group.category)}
+          {skills.map((group, index) => (
+            <FadeIn key={group.category} delay={index * 0.1}>
+              <div
+                className={`h-full rounded-2xl border p-6 backdrop-blur-sm transition-all duration-300 ${getCategoryColor(group.category)}`}
+              >
+                {/* Category Header */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-950 border border-slate-800/60 shadow-inner">
+                    {getCategoryIcon(group.category)}
+                  </div>
+                  <h3 className="font-bold text-slate-100 tracking-wide text-base">
+                    {group.category}
+                  </h3>
                 </div>
-                <h3 className="font-bold text-slate-100 tracking-wide text-sm sm:text-md">
-                  {group.category}
-                </h3>
-              </div>
 
-              {/* Skills Badges */}
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-flex items-center rounded-lg bg-slate-900/80 px-2.5 py-1.5 text-xs font-medium text-slate-300 border border-slate-800/60 hover:text-slate-100 hover:border-slate-700/80 transition-all duration-150"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {/* Skills Badges */}
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="inline-flex items-center rounded-lg bg-slate-900/60 px-3 py-1.5 text-xs font-semibold text-slate-300 border border-slate-700/50 hover:text-white hover:bg-slate-800 transition-all duration-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

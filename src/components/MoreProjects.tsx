@@ -1,5 +1,7 @@
 import React from "react";
 import { portfolioData } from "../data/portfolioData";
+import { SectionHeader } from "./SectionHeader";
+import { FadeIn } from "./FadeIn";
 
 export const MoreProjects: React.FC = () => {
   const { moreProjects } = portfolioData;
@@ -26,71 +28,71 @@ export const MoreProjects: React.FC = () => {
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="mb-10 text-center md:text-left">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-200 sm:text-3xl">
-            More Projects
-          </h2>
-          <div className="mt-2 h-0.5 w-10 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full mx-auto md:mx-0"></div>
-          <p className="mt-4 text-slate-400 text-xs max-w-3xl leading-relaxed">
-            Additional academic, analytics, and AI/data projects showing breadth across machine learning, NLP, data integration, knowledge organization, and business reporting.
-          </p>
-        </div>
+        <FadeIn>
+          <SectionHeader 
+            eyebrow="Additional Work" 
+            heading="More Projects" 
+            subtitle="Additional academic, analytics, and AI/data projects showing breadth across machine learning, NLP, data integration, knowledge organization, and business reporting."
+            alignment="left"
+          />
+        </FadeIn>
 
         {/* Compact Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {moreProjects.map((project) => (
-            <div
-              key={project.title}
-              className="group flex flex-col justify-between rounded-xl border border-slate-900 bg-slate-900/10 p-5 shadow-sm transition-all duration-350 hover:border-slate-800 hover:bg-slate-900/20"
-            >
-              <div className="space-y-3">
-                {/* Category & Title */}
-                <div>
-                  <span className="inline-flex items-center rounded-md bg-slate-950 px-2 py-0.5 text-[9px] font-semibold tracking-wider text-slate-500 border border-slate-900">
-                    {project.category}
-                  </span>
-                  <h3 className="font-bold text-slate-200 group-hover:text-violet-400 transition-colors text-sm mt-1.5 leading-snug">
-                    {project.title}
-                  </h3>
-                </div>
-
-                {/* One-line Description */}
-                <p className="text-slate-400 text-xs leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tech Pills */}
-                <div className="flex flex-wrap gap-1">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="inline-flex items-center rounded bg-slate-950 px-1.5 py-0.5 text-[8.5px] font-medium text-slate-500 border border-slate-900/60"
-                    >
-                      {tech}
+          {moreProjects.map((project, index) => (
+            <FadeIn key={project.title} delay={index * 0.05}>
+              <div
+                className="group h-full flex flex-col justify-between rounded-xl border border-slate-800/80 bg-slate-900/40 p-6 shadow-md transition-all duration-300 hover:border-violet-500/30 hover:bg-slate-900/60 backdrop-blur-sm"
+              >
+                <div className="space-y-4">
+                  {/* Category & Title */}
+                  <div>
+                    <span className="inline-flex items-center rounded-md bg-slate-950 px-2.5 py-1 text-[10px] font-bold tracking-widest text-slate-400 border border-slate-800 uppercase">
+                      {project.category}
                     </span>
-                  ))}
+                    <h3 className="font-bold text-slate-100 group-hover:text-violet-400 transition-colors text-base mt-3 leading-snug">
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  {/* One-line Description */}
+                  <p className="text-slate-400 text-sm leading-relaxed font-medium">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Pills */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="inline-flex items-center rounded bg-slate-950 px-2 py-0.5 text-[10px] font-semibold text-slate-400 border border-slate-800/80"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* GitHub Button or Academic Label */}
+                <div className="pt-6 mt-auto">
+                  {project.githubUrl ? (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 hover:text-white transition-colors border border-slate-700 bg-slate-800/50 px-3 py-1.5 rounded-lg hover:bg-slate-700"
+                    >
+                      {githubIconSvg}
+                      <span>GitHub</span>
+                    </a>
+                  ) : (
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest select-none">
+                      Academic / Internal
+                    </span>
+                  )}
                 </div>
               </div>
-
-              {/* GitHub Button or Academic Label */}
-              <div className="pt-4 mt-auto">
-                {project.githubUrl ? (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-300 hover:text-white transition-colors"
-                  >
-                    {githubIconSvg}
-                    <span>GitHub &rarr;</span>
-                  </a>
-                ) : (
-                  <span className="text-[9.5px] font-semibold text-slate-500 uppercase tracking-wider select-none">
-                    Academic / Internal Project
-                  </span>
-                )}
-              </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
