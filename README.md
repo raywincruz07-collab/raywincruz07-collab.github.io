@@ -36,11 +36,15 @@ Personal portfolio website for Raywin Cruz, a Master's student in Data Science a
 
 ## Featured Projects
 
+- FMCG Multi-Agent Supply Chain Optimizer
 - Context Matters: Diversity-Aware Retrieval for RAG
-- Discourse Analysis — AI Product Development Project
-- AI-Based Logistics Management System
 - Economic Framing Annotation
+- Discourse Analysis — AI Product Development Project
 - Adult Income Prediction — Data Mining Project
+
+## Legacy Code Note
+
+The `new_portfolio/` directory contains an apparently unused legacy HTML prototype. It has unresolved template placeholders and is not referenced by the current Vite build, deployment scripts, or source code.
 
 ## Local Development
 
@@ -72,6 +76,6 @@ https://raywincruz07-collab.github.io
 
 ## Contact
 
-Email: [raywincruz2003@gmail.com](mailto:raywincruz2003@gmail.com)
+Email: [raywincruz07@gmail.com](mailto:raywincruz07@gmail.com)
 LinkedIn: https://www.linkedin.com/in/raywincruz
 GitHub: https://github.com/raywincruz07-collab
