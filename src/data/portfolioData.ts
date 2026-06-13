@@ -63,7 +63,7 @@ export const portfolioData: PortfolioData = {
     ],
     about:
       "I am a Master’s student in Data Science at the University of Mannheim, currently working in AI Product Management related to SAP HANA Cloud. I position myself as a technical AI product profile: someone who can understand AI capabilities, evaluate feasibility, work with data and GenAI/RAG systems, and translate technical findings into product decisions, documentation, and stakeholder-ready insights.",
-    email: "raywincruz2003@gmail.com",
+    email: "raywincruz07@gmail.com",
     linkedin: "https://www.linkedin.com/in/raywincruz",
     github: "https://github.com/raywincruz07-collab",
     message:
@@ -135,6 +135,15 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
+      title: "FMCG Multi-Agent Supply Chain Optimizer",
+      problem: "FMCG supply chains involve complex interconnected decisions across demand forecasting, pack size, financial constraints, production, and routing.",
+      whatIBuilt: "A multi-agent decision-support pipeline combining time-series demand forecasting, constraints, scenario planning, and routing with a Streamlit dashboard.",
+      techStack: ["Python", "Streamlit", "NetworkX", "scikit-learn", "pandas", "pytest"],
+      outcome: "Built a robust, deterministic multi-agent pipeline verified by a 23-test suite, showcasing transparent decision logic and integration blueprints.",
+      githubUrl: "https://github.com/raywincruz07-collab/fmcg-multi-agent-supply-chain-optimizer",
+      caseStudyUrl: "",
+    },
+    {
       title: "Context Matters: Diversity-Aware Retrieval for RAG",
       problem:
         "Medical RAG systems depend heavily on retrieval quality. If the retrieved context is redundant, incomplete, or weak, the final answer can become less useful and more prone to hallucination.",
@@ -155,6 +164,26 @@ export const portfolioData: PortfolioData = {
         "Evaluated retrieval using Recall@5, MRR, F1, and ROUGE-L. Learned how retrieval choice affects answer quality and identified the next product-relevant improvement path: diversity, coverage, faithfulness, and hallucination-aware evaluation.",
       githubUrl:
         "https://github.com/raywincruz07-collab/Context-Matters-Evaluating-Diversity-Aware-Retrieval-for-RAG",
+      caseStudyUrl: "",
+    },
+    {
+      title: "Economic Framing Annotation",
+      problem:
+        "Large-scale immigration news analysis requires consistent identification of economic threat and economic benefit frames across thousands of paragraphs.",
+      whatIBuilt:
+        "Built a structured annotation pipeline for 10,000 German immigration news paragraphs using computational classification and validation against a human gold standard.",
+      techStack: [
+        "R",
+        "annotation pipeline",
+        "prompt-based classification",
+        "validation workflow",
+        "human gold standard",
+        "evaluation metrics",
+      ],
+      outcome:
+        "Validated the pipeline against a 200-row human gold standard, reaching F1 = 0.811 for Economic Threat and F1 = 0.769 for Economic Benefit. Learned how prevalence, recall, and validation design affect annotation reliability.",
+      githubUrl:
+        "https://github.com/raywincruz07-collab/economic-framing-annotation",
       caseStudyUrl: "",
     },
     {
@@ -180,49 +209,6 @@ export const portfolioData: PortfolioData = {
       caseStudyUrl: "",
     },
     {
-      title: "AI-Based Logistics Management System",
-      problem:
-        "Logistics operations need better visibility into delivery delays, route context, operational KPIs, and decision-support signals.",
-      whatIBuilt:
-        "Designed an AI/data analytics logistics system that enriches shipment records with geolocation, route, and weather context to support delay-risk prediction and KPI monitoring.",
-      techStack: [
-        "Python",
-        "machine learning",
-        "API enrichment",
-        "Nominatim",
-        "openrouteservice",
-        "Open-Meteo",
-        "Power BI",
-        "KPI dashboards",
-        "data pipeline design",
-      ],
-      outcome:
-        "Learned how to convert raw operational records into enriched analytics data for prediction, monitoring, route-efficiency reasoning, and executive reporting.",
-      githubUrl:
-        "https://github.com/raywincruz07-collab/ai_logistics_management_system",
-      caseStudyUrl: "",
-    },
-    {
-      title: "Economic Framing Annotation",
-      problem:
-        "Large-scale immigration news analysis requires consistent identification of economic threat and economic benefit frames across thousands of paragraphs.",
-      whatIBuilt:
-        "Built a structured annotation pipeline for 10,000 German immigration news paragraphs using computational classification and validation against a human gold standard.",
-      techStack: [
-        "R",
-        "annotation pipeline",
-        "prompt-based classification",
-        "validation workflow",
-        "human gold standard",
-        "evaluation metrics",
-      ],
-      outcome:
-        "Validated the pipeline against a 200-row human gold standard, reaching F1 = 0.811 for Economic Threat and F1 = 0.769 for Economic Benefit. Learned how prevalence, recall, and validation design affect annotation reliability.",
-      githubUrl:
-        "https://github.com/raywincruz07-collab/economic-framing-annotation",
-      caseStudyUrl: "",
-    },
-    {
       title: "Adult Income Prediction — Data Mining Project",
       problem:
         "Income classification from census-style data requires careful preprocessing, model comparison, evaluation, and fairness analysis.",
@@ -245,6 +231,19 @@ export const portfolioData: PortfolioData = {
     },
   ],
   moreProjects: [
+    {
+      title: "AI-Based Logistics Management System",
+      category: "Data Analytics",
+      description: "Designed an AI/data analytics logistics system enriching shipment records with geolocation, route, and weather context to support delay-risk prediction and KPI monitoring.",
+      techStack: [
+        "Python",
+        "machine learning",
+        "API enrichment",
+        "Power BI",
+        "KPI dashboards",
+      ],
+      githubUrl: "https://github.com/raywincruz07-collab/ai_logistics_management_system",
+    },
     {
       title: "AI Developer Enablement Platform / Knowledge Hub",
       category: "GenAI / Product Enablement",
