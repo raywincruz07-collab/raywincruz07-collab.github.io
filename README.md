@@ -79,3 +79,8 @@ https://raywincruz07-collab.github.io
 Email: [raywincruz07@gmail.com](mailto:raywincruz07@gmail.com)
 LinkedIn: https://www.linkedin.com/in/raywincruz
 GitHub: https://github.com/raywincruz07-collab
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
