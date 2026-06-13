@@ -226,7 +226,7 @@ export const portfolioData: PortfolioData = {
       ],
       outcome:
         "Compared Logistic Regression, Decision Tree, Random Forest, XGBoost, SVM, and a soft-voting ensemble using accuracy, weighted F1, and ROC-AUC. Practiced fair model evaluation under class imbalance and analyzed model behavior across protected attributes.",
-      githubUrl: "https://github.com/hazarcs/IE500-DataMining-Project",
+      githubUrl: "https://github.com/raywincruz07-collab/Adult-Income-Prediction",
       caseStudyUrl: "",
     },
   ],
@@ -263,7 +263,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Data integration project focused on collecting, transforming, and structuring web-based data sources.",
       techStack: ["Python", "Data Integration", "APIs", "Data Cleaning"],
-      githubUrl: "",
+      githubUrl: "https://github.com/raywincruz07-collab/Football-Dataset-Integration",
     },
     {
       title: "Knowledge Graph Recommender",
@@ -271,7 +271,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Recommender concept using structured relationships and graph-based reasoning.",
       techStack: ["Knowledge Graphs", "Recommendation", "Data Modeling"],
-      githubUrl: "",
+      githubUrl: "https://github.com/raywincruz07-collab/RecipeKG-Recommender",
     },
     {
       title: "Data Mining / Malware Classification",
@@ -284,7 +284,7 @@ export const portfolioData: PortfolioData = {
         "Model Evaluation",
         "Data Mining",
       ],
-      githubUrl: "",
+      githubUrl: "https://github.com/raywincruz07-collab/Malware-Classification",
     },
     {
       title: "Payment Fraud Detection",
